@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion as Motion } from 'framer-motion'
 import { collection, addDoc, getDocs, query, orderBy } from 'firebase/firestore'
+import { Routes, Route, Link } from 'react-router-dom'
 import DeckSelector from './components/DeckSelector.jsx'
 import CardReader from './components/CardReader.jsx'
 import History from './components/History.jsx'
@@ -9,8 +10,10 @@ import { decks } from './data/decks.js'
 import { db } from './db.js'
 import { insertTestData } from './insert.js'
 import TestList from './components/TestList.jsx'
+import Entrada from './Entrada/entrada.jsx'
+import Sobre from './Sobre/sobre.jsx'
 
-export default function App() {
+function Home() {
   const [view, setView] = useState('home') // 'home','read','history'
   const [deck, setDeck] = useState(null)
   const [spread, setSpread] = useState(1)
@@ -23,7 +26,7 @@ export default function App() {
       setHistory(snap.docs.map(d => d.data()))
     }
     fetchHistory()
-    insertTestData()
+    //insertTestData()
   }, [])
 
   async function addRecord(record) {
@@ -63,5 +66,22 @@ export default function App() {
         </Motion.div>
       )}
     </AnimatePresence>
+  )
+  }
+
+export default function App() {
+  return (
+    <div>
+      <nav className="p-4 flex gap-4 bg-gray-100">
+        <Link to="/">Home</Link>
+        <Link to="/entrada">Entrada</Link>
+        <Link to="/sobre">Sobre</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/entrada" element={<Entrada />} />
+        <Route path="/sobre" element={<Sobre />} />
+      </Routes>
+    </div>
   )
 }
