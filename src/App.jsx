@@ -1,37 +1,44 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion as Motion } from 'framer-motion'
-import { collection, addDoc, getDocs, query, orderBy } from 'firebase/firestore'
+import { collection, addDoc, getDocs, query, orderBy, where } from 'firebase/firestore'
 import { Routes, Route, Link } from 'react-router-dom'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
 import DeckSelector from './components/DeckSelector.jsx'
 import CardReader from './components/CardReader.jsx'
 import History from './components/History.jsx'
 import CardOfDay from './components/CardOfDay.jsx'
 import { decks } from './data/decks.js'
-import { db } from './db.js'
-import { insertTestData } from './insert.js'
+import { db, auth } from './db.js'
 import TestList from './components/TestList.jsx'
 import Entrada from './Entrada/entrada.jsx'
 import Sobre from './Sobre/sobre.jsx'
+import Login from './components/Login.jsx'
 
-function Home() {
+function Home({ user }) {
   const [view, setView] = useState('home') // 'home','read','history'
   const [deck, setDeck] = useState(null)
   const [spread, setSpread] = useState(1)
   const [history, setHistory] = useState([])
 
   useEffect(() => {
+    if (!user) return
     async function fetchHistory() {
-      const q = query(collection(db, 'history'), orderBy('timestamp', 'desc'))
+      const q = query(
+        collection(db, 'history'),
+        where('uid', '==', user.uid),
+        orderBy('timestamp', 'desc')
+      )
       const snap = await getDocs(q)
       setHistory(snap.docs.map(d => d.data()))
     }
     fetchHistory()
-    //insertTestData()
-  }, [])
+  }, [user])
 
   async function addRecord(record) {
-    await addDoc(collection(db, 'history'), record)
-    setHistory(prev => [record, ...prev])
+    if (!user) return
+    const data = { ...record, uid: user.uid }
+    await addDoc(collection(db, 'history'), data)
+    setHistory(prev => [data, ...prev])
   }
 
   return (
@@ -70,15 +77,30 @@ function Home() {
   }
 
 export default function App() {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, u => setUser(u))
+    return () => unsub()
+  }, [])
+
+  if (!user) return <Login />
+
   return (
     <div>
-      <nav className="p-4 flex gap-4 bg-gray-100">
+      <nav className="p-4 flex gap-4 bg-gray-100 items-center">
         <Link to="/">Home</Link>
         <Link to="/entrada">Entrada</Link>
         <Link to="/sobre">Sobre</Link>
+        <button
+          onClick={() => signOut(auth)}
+          className="ml-auto text-sm text-primary hover:underline"
+        >
+          Sair
+        </button>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home user={user} />} />
         <Route path="/entrada" element={<Entrada />} />
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
