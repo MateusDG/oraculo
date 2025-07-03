@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import SpreadSelector from './SpreadSelector.jsx'
 
@@ -39,11 +39,11 @@ export default function CardReader({ deck, spread, onChangeSpread, onBack, onHis
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {cards.map((c,i)=>(
-          <motion.div key={i} className="relative h-48 perspective"
+          <Motion.div key={i} className="relative h-48 perspective"
             initial={{ rotateY:0 }} animate={{ rotateY: flipped?180:0 }} transition={{ duration:0.6, delay:i*0.2 }}>
             <img src="/cards/back.png" alt="verso" className="absolute w-full h-full rounded-2xl backface-hidden" />
             <img src={c.image} alt={c.name} className="absolute w-full h-full rounded-2xl backface-hidden" style={{ transform:'rotateY(180deg)' }} />
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
 

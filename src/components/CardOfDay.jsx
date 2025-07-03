@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { decks } from '../data/decks.js'
 
 function randomCard(deck){ return deck.cards[Math.floor(Math.random()*deck.cards.length)] }
 
@@ -16,7 +15,7 @@ export default function CardOfDay({ decks }) {
       setCard(c)
       localStorage.setItem('oraculoDay', JSON.stringify({ date:today, card:c }))
     }
-  },[])
+},[decks])
 
   if(!card) return null
   return (
