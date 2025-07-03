@@ -6,7 +6,9 @@ import CardReader from './components/CardReader.jsx'
 import History from './components/History.jsx'
 import CardOfDay from './components/CardOfDay.jsx'
 import { decks } from './data/decks.js'
-import { db } from './firebase.js'
+import { db } from './db.js'
+import { insertTestData } from './insert.js'
+import TestList from './components/TestList.jsx'
 
 export default function App() {
   const [view, setView] = useState('home') // 'home','read','history'
@@ -21,6 +23,7 @@ export default function App() {
       setHistory(snap.docs.map(d => d.data()))
     }
     fetchHistory()
+    insertTestData()
   }, [])
 
   async function addRecord(record) {
@@ -35,6 +38,7 @@ export default function App() {
           initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }} transition={{ duration:0.5 }}>
           <CardOfDay decks={decks} />
           <DeckSelector decks={decks} onSelect={d=>{setDeck(d);setView('read')}} />
+          <TestList />
         </Motion.div>
       )}
 
