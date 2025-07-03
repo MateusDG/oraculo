@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion as Motion } from 'framer-motion'
+import { collection, addDoc, getDocs, query, orderBy } from 'firebase/firestore'
 import DeckSelector from './components/DeckSelector.jsx'
 import CardReader from './components/CardReader.jsx'
 import History from './components/History.jsx'
 import CardOfDay from './components/CardOfDay.jsx'
 import { decks } from './data/decks.js'
+import { db } from './firebase.js'
 
 export default function App() {
   const [view, setView] = useState('home') // 'home','read','history'
@@ -13,14 +15,17 @@ export default function App() {
   const [history, setHistory] = useState([])
 
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem('oraculoHistory')||'[]')
-    setHistory(saved)
+    async function fetchHistory() {
+      const q = query(collection(db, 'history'), orderBy('timestamp', 'desc'))
+      const snap = await getDocs(q)
+      setHistory(snap.docs.map(d => d.data()))
+    }
+    fetchHistory()
   }, [])
 
-  function addRecord(record) {
-    const updated = [record, ...history]
-    setHistory(updated)
-    localStorage.setItem('oraculoHistory', JSON.stringify(updated))
+  async function addRecord(record) {
+    await addDoc(collection(db, 'history'), record)
+    setHistory(prev => [record, ...prev])
   }
 
   return (

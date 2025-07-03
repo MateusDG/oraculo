@@ -16,7 +16,7 @@ export default function CardReader({ deck, spread, onChangeSpread, onBack, onHis
     }
     setFlipped(false)
     setCards(chosen)
-    onAddRecord({ deckId:deck.id, cards:chosen, timestamp:new Date().toISOString() })
+    onAddRecord({ deckId:deck.id, card:chosen[0], timestamp:new Date().toISOString() })
     setTimeout(()=>{
       setFlipped(true)
       confetti({ particleCount:100, spread:70, origin:{ y:0.6 } })
