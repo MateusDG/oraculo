@@ -13,6 +13,8 @@ import TestList from './components/TestList.jsx'
 import Entrada from './Entrada/entrada.jsx'
 import Sobre from './Sobre/sobre.jsx'
 import Login from './components/Login.jsx'
+import SignUp from './components/SignUp.jsx'
+
 
 function Home({ user }) {
   const [view, setView] = useState('home') // 'home','read','history'
@@ -84,8 +86,14 @@ export default function App() {
     return () => unsub()
   }, [])
 
-  if (!user) return <Login />
-
+  if (!user) {
+      return (
+        <Routes>
+          <Route path="/cadastro" element={<SignUp />} />
+          <Route path="*" element={<Login />} />
+        </Routes>
+      )
+    }
   return (
     <div>
       <nav className="p-4 flex gap-4 bg-gray-100 items-center">
