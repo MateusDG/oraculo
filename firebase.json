@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "site": "ihcoraculo-1159b",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {"source": "**", "destination": "/index.html"}
+    ]
+  }
+}
