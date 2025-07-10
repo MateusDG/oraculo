@@ -41,12 +41,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  /* gradiente escuro */
-  background: linear-gradient(
-    135deg,
-    var(--primary) 0%,
-    var(--accent) 100%
-  );
+  /* fundo estrelado místico */
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.07) 0, transparent 50%),
+    linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
 
   font-family: inherit;
   color: #fff; /* assegura contraste com fundo escuro */
@@ -57,6 +56,8 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
   margin: 0;
+  font-family: serif;
+
 }
 
 /* Botões */
