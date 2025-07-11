@@ -14,6 +14,7 @@ import CallToActionButton from './components/common/CallToActionButton';
 // Placeholder Page Components (agora importados)
 import ReadingPagePlaceholder from './pages/placeholders/ReadingPagePlaceholder';
 import AboutPagePlaceholder from './pages/placeholders/AboutPagePlaceholder';
+import CosmicPortalPage from './pages/CosmicPortalPage'; // Importa a nova página
 
 
 // Componente para o layout da Página Inicial
@@ -76,6 +77,7 @@ const OracleApp = () => {
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<HomePageLayout />} />
               <Route path="/reading" element={<ReadingPagePlaceholder />} />
+              <Route path="/portal-cosmico" element={<CosmicPortalPage />} /> {/* Nova rota adicionada */}
               <Route path="/about" element={<AboutPagePlaceholder />} />
               {/* Uma rota catch-all para páginas não encontradas pode ser adicionada aqui. */}
               {/* Exemplo: <Route path="*" element={<NotFoundPage />} /> */}
