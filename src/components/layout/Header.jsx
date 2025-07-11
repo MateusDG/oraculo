@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Menu } from 'antd';
-import { HomeOutlined, ReadOutlined, InfoCircleOutlined } from '@ant-design/icons'; // Ícones do Ant Design
+import { HomeOutlined, ReadOutlined, InfoCircleOutlined, SendOutlined } from '@ant-design/icons'; // Ícones do Ant Design, adicionado SendOutlined
 
 /**
  * Header Component
@@ -32,6 +32,11 @@ const Header = () => {
       icon: <InfoCircleOutlined style={{ fontSize: '1.1rem' }} />,
       label: <Link to="/about">Sobre</Link>,
     },
+    {
+      key: '/portal-cosmico',
+      icon: <SendOutlined style={{ fontSize: '1.1rem' }} />, // Ícone para o portal
+      label: <Link to="/portal-cosmico">Portal</Link>,
+    }
   ];
 
   // Determina a chave do item de menu selecionado com base na rota atual.
