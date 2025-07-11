@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import App from './App.jsx'; // Seu componente App principal
+import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter aqui
+// import App from './App.jsx'; // Seu componente App principal - Comentado se OracleApp é o novo principal
 import OracleApp from './OracleApp.jsx'; // O novo componente raiz da refatoração
 import { ConfigProvider } from 'antd';
 import 'antd/dist/reset.css'; // Importa o reset CSS do Ant Design
@@ -82,10 +82,12 @@ const antdTheme = {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ConfigProvider theme={antdTheme}>
-      {/* <App />  // Comentando o App antigo */}
-      <OracleApp /> {/* Usando o novo OracleApp como raiz da UI refatorada */}
-    </ConfigProvider>
+    <BrowserRouter> { /* BrowserRouter agora envolve OracleApp */ }
+      <ConfigProvider theme={antdTheme}>
+        {/* <App />  // Comentando o App antigo */}
+        <OracleApp /> {/* Usando o novo OracleApp como raiz da UI refatorada */}
+      </ConfigProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
-// Nota: BrowserRouter será configurado dentro de OracleApp.jsx
+// Nota: BrowserRouter foi movido para cá, envolvendo OracleApp.
