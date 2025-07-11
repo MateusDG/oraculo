@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'; // Para animações sutis
+import { GiMagicSwirl } from 'react-icons/gi'; // Ícone para o botão
 
 function HomePage() {
   return (
@@ -8,7 +10,8 @@ function HomePage() {
       className="flex flex-col items-center justify-center min-h-screen p-6 text-center bg-gradient-to-br from-darkBg via-deepPurple to-mysticBlue text-lightText"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }} // Duração da transição de entrada/saída da página
     >
       <motion.h1
         className="text-5xl md:text-7xl font-title mb-6 text-goldAccent"
@@ -35,8 +38,9 @@ function HomePage() {
       >
         <Link
           to="/reading"
-          className="px-8 py-4 bg-goldAccent text-darkBg font-bold font-title text-xl rounded-lg shadow-lg hover:bg-yellow-400 transition-colors duration-300 transform hover:scale-105 button-ripple"
+          className="inline-flex items-center justify-center px-8 py-4 bg-goldAccent text-darkBg font-bold font-title text-xl rounded-lg shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 button-ripple"
         >
+          <GiMagicSwirl className="mr-3 text-2xl" />
           Iniciar Leitura Mística
         </Link>
       </motion.div>

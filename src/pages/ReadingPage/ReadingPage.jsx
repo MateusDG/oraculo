@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import TarotCard from '../../components/common/TarotCard';
 import { tarotDeck } from '../../data/tarotData'; // Importando nosso baralho mockado
+import { FiRefreshCw, FiHome } from 'react-icons/fi'; // Ícones para os botões
 
 const ReadingPage = () => {
   const [drawnCards, setDrawnCards] = useState([]);
@@ -53,7 +55,8 @@ const ReadingPage = () => {
       className="min-h-screen bg-gradient-to-br from-darkBg via-mysticBlue to-deepPurple text-lightText p-6 flex flex-col items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
     >
       <motion.h1
         className="text-4xl md:text-6xl font-title mb-8 text-goldAccent"
@@ -107,18 +110,20 @@ const ReadingPage = () => {
       )}
 
       {/* Botões de Ação */}
-      <div className="mt-10 flex space-x-4">
+      <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center">
         <button
           onClick={drawCards}
-          className="px-6 py-3 bg-goldAccent text-darkBg font-bold font-title rounded-lg shadow-lg hover:bg-yellow-400 transition-colors duration-300 transform hover:scale-105 button-ripple"
+          className="inline-flex items-center justify-center px-6 py-3 bg-goldAccent text-darkBg font-bold font-title rounded-lg shadow-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 button-ripple w-full sm:w-auto"
         >
-          Nova Leitura (Sortear Novamente)
+          <FiRefreshCw className="mr-2" />
+          Nova Leitura
         </button>
         <Link
           to="/"
-          className="px-6 py-3 bg-secondary text-primary font-bold font-title rounded-lg shadow-lg hover:bg-purple-200 transition-colors duration-300 transform hover:scale-105"
+          className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-primary font-bold font-title rounded-lg shadow-lg hover:bg-purple-300 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 w-full sm:w-auto"
         >
-          Voltar à Página Inicial
+          <FiHome className="mr-2" />
+          Página Inicial
         </Link>
       </div>
     </motion.div>
