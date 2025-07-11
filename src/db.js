@@ -1,6 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore, doc, setDoc } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
+import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAemgkd02qf8_dszAth5cKZ8b1NTLUpUBo',
@@ -13,18 +12,3 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 export const db = getFirestore(app)
-export const auth = getAuth(app)
-
-export async function saveUser(user) {
-  if (!user) return
-  const ref = doc(db, 'users', user.uid)
-  await setDoc(
-    ref,
-    {
-      uid: user.uid,
-      name: user.displayName || '',
-      email: user.email || '',
-    },
-    { merge: true }
-  )
-}

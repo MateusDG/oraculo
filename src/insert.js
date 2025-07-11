@@ -5,7 +5,7 @@ export async function insertTestData() {
   const data = {
     nome: 'Teste',
     valor: 123,
-    timestamp: Date.now()
+    timestamp: Date.now(),
   }
   try {
     await addDoc(collection(db, 'testes'), data)
