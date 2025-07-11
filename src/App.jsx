@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { AnimatePresence, motion as Motion } from 'framer-motion'
 import { collection, addDoc, getDocs, query, orderBy } from 'firebase/firestore'
 import { Routes, Route, Link } from 'react-router-dom'
-import DeckSelector from './components/DeckSelector.jsx'
-import CardReader from './components/CardReader.jsx'
-import History from './components/History.jsx'
-import CardOfDay from './components/CardOfDay.jsx'
+import DeckSelector from './components/common/DeckSelector.jsx'
+import CardReader from './components/common/CardReader.jsx'
+import History from './components/common/History.jsx'
+import CardOfDay from './components/common/CardOfDay.jsx'
 import { decks } from './data/decks.js'
-import { db } from './db.js'
-import TestList from './components/TestList.jsx'
-import Entrada from './Entrada/entrada.jsx'
-import Sobre from './Sobre/sobre.jsx'
+import { db } from './utils/db.js'
+import TestList from './components/common/TestList.jsx'
+import HomePage from './pages/HomePage/HomePage.jsx'
+import AboutPage from './pages/AboutPage/AboutPage.jsx'
 
 function Home() {
   const [view, setView] = useState('home')
@@ -90,13 +90,13 @@ export default function App() {
     <div>
       <nav className="p-4 flex gap-4 bg-gray-100 items-center">
         <Link to="/">Home</Link>
-        <Link to="/entrada">Entrada</Link>
-        <Link to="/sobre">Sobre</Link>
+        <Link to="/home">Entrada</Link> {/* Assuming /home or /homepage for HomePage */}
+        <Link to="/about">Sobre</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/entrada" element={<Entrada />} />
-        <Route path="/sobre" element={<Sobre />} />
+        <Route path="/" element={<Home />} /> {/* This Home is the local function, not HomePage component */}
+        <Route path="/home" element={<HomePage />} /> {/* Changed to HomePage component */}
+        <Route path="/about" element={<AboutPage />} /> {/* Changed to AboutPage component */}
       </Routes>
     </div>
   )
