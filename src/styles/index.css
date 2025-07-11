@@ -1,58 +1,69 @@
-/* Definições de @font-face */
-@font-face {
-  font-family: 'Cinzel Decorative';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../assets/fonts/cinzel-decorative-regular.ttf') format('truetype');
-}
+/* Definições de @font-face para as novas fontes */
 
+/* Cinzel Decorative */
 @font-face {
   font-family: 'Cinzel Decorative';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400; /* Regular */
   font-display: swap;
-  src: url('../assets/fonts/cinzel-decorative-bold.ttf') format('truetype');
+  src: url('../assets/fonts/CinzelDecorative-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Cinzel Decorative';
   font-style: normal;
-  font-weight: 900;
+  font-weight: 700; /* Bold */
   font-display: swap;
-  src: url('../assets/fonts/cinzel-decorative-black.ttf') format('truetype');
+  src: url('../assets/fonts/CinzelDecorative-Bold.ttf') format('truetype');
 }
 
+/* Montserrat */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400; /* Regular */
   font-display: swap;
-  src: url('../assets/fonts/lato-regular.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Montserrat';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 400; /* Regular Italic */
   font-display: swap;
-  src: url('../assets/fonts/lato-italic.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-Italic.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Montserrat';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500; /* Medium */
   font-display: swap;
-  src: url('../assets/fonts/lato-bold.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Montserrat';
   font-style: italic;
-  font-weight: 700;
+  font-weight: 500; /* Medium Italic */
   font-display: swap;
-  src: url('../assets/fonts/lato-bolditalic.ttf') format('truetype');
+  src: url('../assets/fonts/Montserrat-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700; /* Bold */
+  font-display: swap;
+  src: url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700; /* Bold Italic */
+  font-display: swap;
+  src: url('../assets/fonts/Montserrat-BoldItalic.ttf') format('truetype');
 }
 
 /* Diretivas Tailwind */
