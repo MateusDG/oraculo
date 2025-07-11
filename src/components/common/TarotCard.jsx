@@ -15,21 +15,23 @@ const TarotCard = ({ cardData, isFlipped, onClick }) => {
   } = cardData || {};
 
   const cardAnimationVariants = {
-    initial: {
+    initial: { // Não usado explicitamente se animate é definido diretamente, mas bom para referência
       rotateY: 0,
     },
     flipped: {
       rotateY: 180,
+      transition: { duration: 0.7, ease: "circOut" } // Animação de virar refinada
     },
     unflipped: {
       rotateY: 0,
+      transition: { duration: 0.7, ease: "circOut" } // Animação de desvirar refinada
     },
   };
 
   const hoverEffect = {
-    scale: 1.03, // Efeito de hover mais sutil na escala
-    boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.25)", // Sombra um pouco mais suave
-    transition: { type: "spring", stiffness: 300, damping: 20 }
+    scale: 1.04, // Aumentei um pouco a escala para ser mais perceptível
+    boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.3)", // Sombra um pouco mais pronunciada
+    transition: { type: "spring", stiffness: 280, damping: 18 } // Ajuste na física da mola
   };
 
   const cardFaceBaseStyle = "absolute w-full h-full rounded-lg shadow-md overflow-hidden border-2 flex flex-col";

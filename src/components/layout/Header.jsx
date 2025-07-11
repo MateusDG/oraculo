@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom'; // Usando NavLink para active states
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-// import { GiCrystalBall } from 'react-icons/gi'; // Exemplo de ícone
+import { GiCrystalBall } from 'react-icons/gi'; // Ícone para o título
 
 const Header = () => {
   const activeLinkStyle = "text-goldAccent scale-110";
