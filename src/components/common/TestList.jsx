@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { fetchTestData } from '../select.js'
+import { fetchTestData } from '../../utils/select.js'
 import TestForm from './TestForm.jsx'
 
 export default function TestList() {

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Entrada() {
+function HomePage() {
   return (
     <div className="mx-auto mt-10 bg-green-50 p-8 border border-gray-300 rounded-r-lg">
       <h1> Oráculo </h1>
@@ -9,8 +9,8 @@ function Entrada() {
         <input placeholder="Data de nascimento" type="date" />
         <button>Resposta do Oráculo</button>
       </form>
-      <Link to="/Sobre">Clique para saber mais</Link>
+      <Link to="/about">Clique para saber mais</Link>
     </div>
   );
 }
-export default Entrada;
+export default HomePage;

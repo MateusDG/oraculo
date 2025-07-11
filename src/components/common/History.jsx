@@ -1,5 +1,5 @@
 import React from 'react'
-import { decks } from '../data/decks.js'
+import { decks } from '../../data/decks.js'
 
 export default function History({ records, onBack }) {
   return (

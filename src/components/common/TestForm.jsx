@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { collection, addDoc } from 'firebase/firestore'
-import { db } from '../db.js'
+import { db } from '../../utils/db.js'
 
 export default function TestForm({ onAdd }) {
   const [nome, setNome] = useState('')
