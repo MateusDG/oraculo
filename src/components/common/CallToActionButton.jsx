@@ -1,89 +1,92 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion'; // Usado para motion.button
-import confetti from 'canvas-confetti';   // Para o efeito visual de celebração no clique
-import { GiMagicSwirl } from 'react-icons/gi'; // Ícone temático para o botão
+import { motion } from 'framer-motion'; // Para animação de entrada e hover/tap no wrapper
+import { Button } from 'antd'; // Importa o componente Button do Ant Design
+import confetti from 'canvas-confetti';
+import { GiMagicSwirl } from 'react-icons/gi'; // Ícone temático
+// Ou, para usar um ícone do AntD:
+// import { RocketOutlined } from '@ant-design/icons';
 
 /**
  * CallToActionButton Component
  *
- * Um botão de call-to-action proeminente, geralmente usado para a ação principal da página.
- * Inclui:
- * - Estilização atraente e alinhada com o tema.
- * - Animações de entrada, hover e clique com `framer-motion`.
- * - Efeito de confete no clique usando `canvas-confetti`.
- * - Um ícone para complementar o texto.
+ * Utiliza o Button do Ant Design com tema customizado e Framer Motion para animações.
+ * Dispara um efeito de confete ao ser clicado.
  *
  * @param {Object} props - Propriedades do componente.
- * @param {Function} props.onClick - Função a ser chamada quando o botão é clicado,
- *                                   além do efeito de confete.
+ * @param {Function} props.onClick - Função a ser chamada quando o botão é clicado.
  */
 const CallToActionButton = ({ onClick }) => {
-  // Variantes de animação para o botão.
-  const buttonVariants = {
-    hidden: { scale: 0.5, opacity: 0 }, // Estado inicial: pequeno e invisível.
-    visible: { // Estado final (entrada):
+  // Variantes de animação para o wrapper do botão (motion.div).
+  const wrapperVariants = {
+    hidden: { scale: 0.5, opacity: 0 },
+    visible: {
       scale: 1,
       opacity: 1,
       transition: {
-        type: "spring", // Animação tipo "mola" para um efeito mais natural.
+        type: "spring",
         stiffness: 260,
         damping: 20,
-        delay: 1.2, // Atraso para aparecer após outros elementos da página.
+        delay: 1.2, // Mantém o delay para aparecer após o conteúdo.
       },
     },
-    hover: { // Efeito ao passar o mouse:
-      scale: 1.08, // Aumenta ligeiramente a escala.
-      // Simula um brilho dourado; pode ser substituído por uma classe Tailwind com `shadow-glow-gold`
-      boxShadow: "0px 0px 25px 0px rgba(255,193,7,0.7)",
+    hover: { // Efeito de hover no wrapper, pode ser sutil ou complementar ao do botão AntD.
+      scale: 1.05, // Leve aumento de escala no hover.
+      // A sombra pode ser controlada pelo tema do AntD ou Tailwind no próprio botão.
       transition: { type: "spring", stiffness: 300, damping: 15 },
     },
-    tap: { // Efeito ao clicar/tocar:
-      scale: 0.95, // Diminui ligeiramente a escala para feedback tátil.
+    tap: { // Efeito de clique no wrapper.
+      scale: 0.98,
       transition: { type: "spring", stiffness: 400, damping: 25 },
     },
   };
 
-  // Manipulador de clique que dispara o confete e chama a prop onClick.
-  const handleConfetti = () => { // Parâmetro 'event' removido pois não estava sendo utilizado.
-    // Obtém as coordenadas do clique para originar o confete do local do mouse, se possível.
-    // Para simplificar, vamos usar uma origem fixa por enquanto.
-    // Se precisar do evento: const handleConfetti = (event) => { ... }
-    // const rect = event.target.getBoundingClientRect();
-    // const x = (event.clientX - rect.left) / rect.width;
-    // const y = (event.clientY - rect.top) / rect.height;
-
+  const handleButtonClick = () => {
     confetti({
-      particleCount: 150, // Número de partículas de confete.
-      spread: 90,         // Ângulo de dispersão.
-      origin: { y: 0.6 }, // Origem vertical do efeito (0.6 = 60% de cima para baixo).
-      colors: ['#FFC107', '#FFD54F', '#4A00E0', '#F0E6FF', '#2C005E'] // Cores da paleta da aplicação.
+      particleCount: 180, // Aumentei um pouco as partículas
+      spread: 100,        // E o spread
+      origin: { y: 0.6 },
+      colors: ['#FFC107', '#FFD54F', '#4A00E0', '#F0E6FF', '#2C005E', '#7F00FF'], // Cores da paleta
+      angle: 90,
+      startVelocity: 40,
+      gravity: 0.8,
     });
 
-    // Chama a função onClick original passada como prop, se existir.
     if (onClick) {
       onClick();
     }
   };
 
   return (
-    <motion.button
-      className="inline-flex items-center justify-center px-8 py-4
-                 bg-accent-gold text-primary-dark
-                 font-bold font-heading text-lg md:text-xl tracking-wide
-                 rounded-xl shadow-lg
-                 border-2 border-accent-gold-light/50
-                 focus:outline-none focus:ring-4 focus:ring-accent-gold-light/50" // Estilos para acessibilidade do foco.
-      variants={buttonVariants} // Aplica as variantes de animação.
-      initial="hidden"         // Estado inicial da animação.
-      animate="visible"        // Estado final da animação de entrada.
-      whileHover="hover"       // Animação ao passar o mouse.
-      whileTap="tap"           // Animação ao clicar/tocar.
-      onClick={handleConfetti} // Adiciona o manipulador de clique com confete.
+    // Envolve o botão AntD com motion.div para controlar a animação de entrada e interações de hover/tap.
+    <motion.div
+      variants={wrapperVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover="hover"
+      whileTap="tap"
+      className="inline-block" // Para que o motion.div não ocupe a largura total por padrão.
     >
-      <GiMagicSwirl className="mr-3 h-6 w-6 md:h-7 md:w-7" /> {/* Ícone temático. */}
-      Iniciar Leitura Agora
-    </motion.button>
+      <Button
+        type="primary" // Isso usará os tokens colorPrimary, colorTextPrimary do tema AntD.
+        size="large"   // Botão grande para destaque.
+        icon={<GiMagicSwirl style={{ fontSize: '1.2em', marginRight: '8px' }} />} // Ícone com estilo.
+        onClick={handleButtonClick}
+        // Aplicando classes Tailwind para a fonte e ajustes finos que o tema AntD não cobre facilmente.
+        // A fonte do botão é controlada pelo tema do AntD via token.fontFamily,
+        // mas se precisarmos de uma fonte específica APENAS para este botão, Tailwind é uma opção.
+        // O tema do AntD já define borderRadius e controlHeight.
+        // As sombras e cores de hover/active são primariamente controladas pelo tema do AntD para Button.
+        className="font-heading tracking-wide flex items-center justify-center
+                   !text-primary-dark hover:!text-primary-dark focus:!text-primary-dark
+                   active:!text-primary-dark"
+        // O uso de ! (important) é para garantir que as classes Tailwind para texto
+        // sobrescrevam o tema do AntD se houver conflito direto na cor do texto do botão primário.
+        // O tema do AntD para Button.colorTextPrimary já está definido como '#2C005E'.
+      >
+        Iniciar Leitura Agora
+      </Button>
+    </motion.div>
   );
 };
 
