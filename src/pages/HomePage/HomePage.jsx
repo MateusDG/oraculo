@@ -1,16 +1,57 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'; // Para animações sutis
 
 function HomePage() {
   return (
-    <div className="mx-auto mt-10 bg-green-50 p-8 border border-gray-300 rounded-r-lg">
-      <h1> Oráculo </h1>
-      <form>
-        <input placeholder="Nome" type="text" />
-        <input placeholder="Data de nascimento" type="date" />
-        <button>Resposta do Oráculo</button>
-      </form>
-      <Link to="/about">Clique para saber mais</Link>
-    </div>
+    <motion.div
+      className="flex flex-col items-center justify-center min-h-screen p-6 text-center bg-gradient-to-br from-darkBg via-deepPurple to-mysticBlue text-lightText"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <motion.h1
+        className="text-5xl md:text-7xl font-title mb-6 text-goldAccent"
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        Oráculo Vidente
+      </motion.h1>
+
+      <motion.p
+        className="text-lg md:text-xl font-body mb-10 max-w-2xl text-secondary"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        Desvende os mistérios do seu caminho. Permita que as cartas revelem insights profundos e guiem suas decisões com sabedoria ancestral.
+      </motion.p>
+
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      >
+        <Link
+          to="/reading"
+          className="px-8 py-4 bg-goldAccent text-darkBg font-bold font-title text-xl rounded-lg shadow-lg hover:bg-yellow-400 transition-colors duration-300 transform hover:scale-105 button-ripple"
+        >
+          Iniciar Leitura Mística
+        </Link>
+      </motion.div>
+
+      <motion.div
+        className="mt-12"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+      >
+        <Link to="/about" className="font-body text-secondary hover:text-goldAccent transition-colors">
+          Sobre o Oráculo
+        </Link>
+      </motion.div>
+    </motion.div>
   );
 }
 export default HomePage;
