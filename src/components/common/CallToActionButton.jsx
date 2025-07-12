@@ -43,15 +43,25 @@ const CallToActionButton = ({ onClick, text = "Iniciar Leitura Agora" }) => {
   };
 
   const handleButtonClick = () => {
-    confetti({
-      particleCount: 180, // Aumentei um pouco as partículas
-      spread: 100,        // E o spread
-      origin: { y: 0.6 },
-      colors: ['#FFC107', '#FFD54F', '#4A00E0', '#F0E6FF', '#2C005E', '#7F00FF'], // Cores da paleta
-      angle: 90,
-      startVelocity: 40,
-      gravity: 0.8,
-    });
+    // Efeito de confete "místico"
+    const duration = 2 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+    function randomInRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    const interval = setInterval(function() {
+      const timeLeft = animationEnd - Date.now();
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+      const particleCount = 50 * (timeLeft / duration);
+      // Dispara de ambos os lados
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }, colors: ['#FFC107', '#FFD54F', '#F0E6FF'] }));
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }, colors: ['#4A00E0', '#2C005E', '#7F00FF'] }));
+    }, 250);
 
     if (onClick) {
       onClick();
@@ -73,14 +83,12 @@ const CallToActionButton = ({ onClick, text = "Iniciar Leitura Agora" }) => {
         size="large"   // Botão grande para destaque.
         icon={<GiMagicSwirl style={{ fontSize: '1.2em', marginRight: '8px' }} />} // Ícone com estilo.
         onClick={handleButtonClick}
-        // Aplicando classes Tailwind para a fonte e ajustes finos que o tema AntD não cobre facilmente.
-        // A fonte do botão é controlada pelo tema do AntD via token.fontFamily,
-        // mas se precisarmos de uma fonte específica APENAS para este botão, Tailwind é uma opção.
-        // O tema do AntD já define borderRadius e controlHeight.
-        // As sombras e cores de hover/active são primariamente controladas pelo tema do AntD para Button.
+        // Adicionando classes de hover para o efeito de brilho (glow) e transição.
         className="font-heading tracking-wide flex items-center justify-center
                    !text-primary-dark hover:!text-primary-dark focus:!text-primary-dark
-                   active:!text-primary-dark"
+                   active:!text-primary-dark
+                   transition-all duration-300 ease-in-out
+                   hover:shadow-lg hover:shadow-accent-gold/30"
         // O uso de ! (important) é para garantir que as classes Tailwind para texto
         // sobrescrevam o tema do AntD se houver conflito direto na cor do texto do botão primário.
         // O tema do AntD para Button.colorTextPrimary já está definido como '#2C005E'.

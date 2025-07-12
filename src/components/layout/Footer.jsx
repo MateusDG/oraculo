@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { CopyrightOutlined, UserOutlined, InfoCircleOutlined } from '@ant-design/icons';
-// import { getAuth, onAuthStateChanged } from 'firebase/auth';
-// import app from '../../utils/firebase';
+import { CopyrightOutlined, GithubOutlined, LinkedinOutlined, TwitterOutlined, InfoCircleOutlined } from '@ant-design/icons';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const [userId, setUserId] = useState(null);
-  const [isLoadingUserId, setIsLoadingUserId] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setUserId(null); // Simula nenhum usuário logado
-      setIsLoadingUserId(false);
-    }, 2500);
-    return () => clearTimeout(timer);
-  }, []);
 
   const footerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -30,16 +18,17 @@ const Footer = () => {
       initial="hidden"
       animate="visible"
     >
-      <div className="container mx-auto space-y-4">
-        <div className="flex items-center justify-center text-xs text-text-muted/70 font-body min-h-[20px]">
-          <UserOutlined className="mr-2" />
-          {isLoadingUserId ? (
-            <span>Carregando sessão...</span>
-          ) : userId ? (
-            <span>ID do Usuário (Debug): {userId}</span>
-          ) : (
-            <span>Para uma experiência personalizada, faça login.</span>
-          )}
+      <div className="container mx-auto space-y-6">
+        <div className="flex justify-center space-x-6">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-gold transition-colors duration-300">
+            <GithubOutlined style={{ fontSize: '1.8rem' }} />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-gold transition-colors duration-300">
+            <LinkedinOutlined style={{ fontSize: '1.8rem' }} />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-accent-gold transition-colors duration-300">
+            <TwitterOutlined style={{ fontSize: '1.8rem' }} />
+          </a>
         </div>
         <div className="flex items-center justify-center text-sm text-text-muted">
           <CopyrightOutlined className="mr-2" />
@@ -47,7 +36,7 @@ const Footer = () => {
         </div>
         <div className="flex items-center justify-center text-xs text-text-muted/60 italic">
           <InfoCircleOutlined className="mr-2" />
-          <span>As leituras destinam-se a fins de introspecção e entretenimento.</span>
+          <span>As leituras destinam-se a fins de introspecção e entretenimento. Confie na sua jornada.</span>
         </div>
       </div>
     </motion.footer>

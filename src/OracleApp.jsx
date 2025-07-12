@@ -42,7 +42,7 @@ const HomePageLayout = () => {
           <div className="mt-10 md:mt-12">
             <RouterLink to="/reading">
               {/* Passando o novo texto para o botão CTA */}
-              <CallToActionButton onClick={handleStartReading} text="Revelar Meu Caminho" />
+              <CallToActionButton onClick={handleStartReading} text="Desvende os Mistérios" />
             </RouterLink>
           </div>
         </div>
