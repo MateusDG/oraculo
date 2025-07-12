@@ -4,7 +4,8 @@ import { List, Card, Typography, Spin, Empty, Tag, message as antMessage } from 
 import { motion, AnimatePresence } from 'framer-motion';
 import { db } from '../../utils/firebase'; // Instância do Firestore
 import { collection, query, orderBy, onSnapshot, Timestamp } from 'firebase/firestore';
-import { MessageOutlined, UserOutlined, FieldTimeOutlined } from '@ant-design/icons';
+import { MessageOutlined, FieldTimeOutlined } from '@ant-design/icons';
+import { FaRegStar } from 'react-icons/fa';
 
 const { Text, Paragraph } = Typography;
 
@@ -113,16 +114,15 @@ const CosmicMessagesList = () => {
               layout // Anima mudanças de layout se a ordem/número de itens mudar
             >
               <Card
-                hoverable // Efeito de hover sutil do AntD
-                className="border border-accent-gold/20 shadow-lg bg-primary-dark/60 backdrop-blur-sm h-full flex flex-col"
-                // style={{ borderColor: 'var(--ant-color-border-secondary, #4A00E0)', backgroundColor: 'var(--ant-color-bg-container, #2C005E)'}}
+                hoverable
+                className="border border-purple-400/30 shadow-lg bg-black/20 backdrop-blur-lg h-full flex flex-col"
               >
                 <Card.Meta
-                  avatar={<UserOutlined style={{ color: 'var(--ant-color-text-secondary, #A094B7)', fontSize: '1.5rem' }} />}
-                  title={<Text className="!text-accent-gold-light font-heading text-lg">{item.author || 'Anônimo Cósmico'}</Text>}
+                  avatar={<FaRegStar style={{ color: '#FFD54F', fontSize: '1.5rem' }} />}
+                  title={<Text className="!text-accent-gold-light font-heading text-xl">{item.author || 'Anônimo Cósmico'}</Text>}
                   description={
-                    <Text className="!text-text-muted/80 font-body text-xs">
-                      <FieldTimeOutlined style={{ marginRight: '6px' }} />
+                    <Text className="!text-text-muted/80 font-body text-xs flex items-center">
+                      <FieldTimeOutlined className="mr-2" />
                       {formatTimestamp(item.timestamp)}
                     </Text>
                   }
