@@ -76,7 +76,7 @@ const ReadingPage = () => {
         </Space>
       </motion.div>
 
-      <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12 min-h-[380px] md:min-h-[400px]">
+      <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-16 md:gap-24 mb-12 min-h-[380px] md:min-h-[400px]">
         <AnimatePresence>
           {drawnCards.map((card, index) => {
             console.log('Rendering TarotCard with data:', card); // LOG PARA DEBUG
