@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Form, Input, Button, message as antMessage } from 'antd'; // Importa componentes AntD e message para feedback
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { SendOutlined, UserOutlined } from '@ant-design/icons';
-import { db } from '../../utils/firebase'; // Importa a instância do Firestore
+import { UserOutlined } from '@ant-design/icons';
+import { FaPaperPlane, FaUserAstronaut } from 'react-icons/fa';
+import { db } from '../../utils/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 /**
@@ -44,7 +45,7 @@ const CosmicMessageForm = () => {
 
   return (
     <motion.div
-      className="w-full max-w-lg p-6 md:p-8 bg-primary-dark/50 backdrop-blur-md rounded-xl shadow-2xl border border-accent-gold/20"
+      className="w-full max-w-lg p-6 md:p-8 bg-black/20 backdrop-blur-lg rounded-2xl shadow-2xl border border-purple-400/30"
       variants={formVariants}
       initial="hidden"
       animate="visible"
@@ -59,41 +60,49 @@ const CosmicMessageForm = () => {
         name="cosmic_message_form"
         // Estilização dos labels do formulário via ConfigProvider ou classes se necessário
       >
-        <Form.Item
-          name="message"
-          label={<span className="text-text-muted font-body">Sua Mensagem</span>}
-          rules={[{ required: true, message: 'Por favor, escreva sua mensagem cósmica!' }]}
-        >
-          <Input.TextArea
-            rows={4}
-            placeholder="Escreva aqui seus pensamentos, intenções ou observações..."
-            className="font-body" // Garante a fonte correta
-            // O tema do AntD deve cuidar do estilo do TextArea (bg, border, text color)
-          />
-        </Form.Item>
+        <motion.div whileFocus={{ scale: 1.02 }}>
+          <Form.Item
+            name="message"
+            label={<span className="text-text-muted font-body">Sua Mensagem</span>}
+            rules={[{ required: true, message: 'Por favor, escreva sua mensagem cósmica!' }]}
+          >
+            <Input.TextArea
+              rows={4}
+              placeholder="Escreva aqui seus pensamentos, intenções ou observações..."
+              className="font-body"
+            />
+          </Form.Item>
+        </motion.div>
 
-        <Form.Item
-          name="author"
-          label={<span className="text-text-muted font-body">Seu Nome (Opcional)</span>}
-        >
-          <Input
-            placeholder="Como você gostaria de ser chamado nas estrelas?"
-            prefix={<UserOutlined className="site-form-item-icon text-text-muted/70" />}
-            className="font-body"
-          />
-        </Form.Item>
+        <motion.div whileFocus={{ scale: 1.02 }}>
+          <Form.Item
+            name="author"
+            label={<span className="text-text-muted font-body">Seu Nome (Opcional)</span>}
+          >
+            <Input
+              placeholder="Como você gostaria de ser chamado nas estrelas?"
+              prefix={<FaUserAstronaut className="site-form-item-icon text-text-muted/70 mr-2" />}
+              className="font-body"
+            />
+          </Form.Item>
+        </motion.div>
 
         <Form.Item className="mt-6">
-          <Button
-            type="primary" // Usará o estilo primário dourado do tema AntD
-            htmlType="submit"
-            loading={isSubmitting}
-            icon={<SendOutlined />}
-            size="large"
-            className="w-full font-heading tracking-wider" // Fonte de título para o botão
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            {isSubmitting ? 'Enviando ao Cosmos...' : 'Enviar Mensagem'}
-          </Button>
+            <Button
+              type="primary"
+              htmlType="submit"
+              loading={isSubmitting}
+              icon={<FaPaperPlane />}
+              size="large"
+              className="w-full font-heading tracking-wider bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 border-none"
+            >
+              {isSubmitting ? 'Enviando ao Cosmos...' : 'Enviar Mensagem'}
+            </Button>
+          </motion.div>
         </Form.Item>
       </Form>
     </motion.div>

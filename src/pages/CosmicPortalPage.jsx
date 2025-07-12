@@ -1,8 +1,8 @@
 import React from 'react';
-// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import CosmicMessageForm from '../components/firebase/CosmicMessageForm';
-import CosmicMessagesList from '../components/firebase/CosmicMessagesList'; // Import que estava faltando
+import CosmicMessagesList from '../components/firebase/CosmicMessagesList';
+import ParticlesBackground from '../components/common/ParticlesBackground';
 
 /**
  * CosmicPortalPage Component
@@ -18,41 +18,44 @@ const CosmicPortalPage = () => {
   };
 
   return (
-    <motion.div
-      className="flex flex-col items-center w-full py-8" // py-8 para dar espaço acima e abaixo
-      variants={pageVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
-      {/* Título da Página */}
-      <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl font-heading text-accent-gold mb-10 md:mb-12 text-center"
-        initial={{ opacity:0, y: -30 }}
-        animate={{ opacity:1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+    <>
+      <ParticlesBackground />
+      <motion.div
+        className="flex flex-col items-center w-full py-8"
+        variants={pageVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
-        Portal das Mensagens Cósmicas
-      </motion.h1>
-
-      {/* Formulário para enviar mensagens */}
-      <div className="mb-12 md:mb-16 w-full flex justify-center">
-        <CosmicMessageForm />
-      </div>
-
-      {/* Lista de Mensagens Cósmicas */}
-      <div className="w-full max-w-4xl xl:max-w-5xl">
-        <motion.h2
-          className="text-3xl sm:text-4xl font-heading text-accent-gold-light mb-8 text-center"
-          initial={{ opacity:0, y: -20 }}
-          animate={{ opacity:1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }} // Delay para aparecer após o formulário
+        {/* Título da Página */}
+        <motion.h1
+          className="text-4xl sm:text-5xl md:text-6xl font-heading text-accent-gold mb-10 md:mb-12 text-center"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
         >
-          Ecos Recentes do Universo
-        </motion.h2>
-        <CosmicMessagesList />
-      </div>
-    </motion.div>
+          Portal das Mensagens Cósmicas
+        </motion.h1>
+
+        {/* Formulário para enviar mensagens */}
+        <div className="mb-12 md:mb-16 w-full flex justify-center">
+          <CosmicMessageForm />
+        </div>
+
+        {/* Lista de Mensagens Cósmicas */}
+        <div className="w-full max-w-4xl xl:max-w-5xl">
+          <motion.h2
+            className="text-3xl sm:text-4xl font-heading text-accent-gold-light mb-8 text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            Ecos Recentes do Universo
+          </motion.h2>
+          <CosmicMessagesList />
+        </div>
+      </motion.div>
+    </>
   );
 };
 
