@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link as RouterLink, useLocation } from 'react-router-dom';
+import { Routes, Route, Link as RouterLink, useLocation } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from 'framer-motion';
 import { Card } from 'antd'; // Importa o Card do AntD
@@ -69,25 +69,23 @@ const AnimatedRoutes = () => {
 // Componente Raiz da Aplicação
 const OracleApp = () => {
   return (
-    <BrowserRouter>
-      <div
-        className="flex flex-col min-h-screen bg-dark-bg text-text-light font-body selection:bg-accent-gold selection:text-primary-dark"
-        style={{
-          backgroundImage: `
-            radial-gradient(at 20% 80%, hsla(260, 50%, 20%, 0.3) 0px, transparent 50%),
-            radial-gradient(at 80% 20%, hsla(280, 60%, 30%, 0.3) 0px, transparent 50%),
-            url('https://www.transparenttextures.com/patterns/stardust.png'),
-            linear-gradient(135deg, #12002b, #2C005E)
-          `,
-        }}
-      >
-        <Header />
-        <main className="flex-grow flex flex-col items-center justify-center container mx-auto p-4 sm:p-6 md:p-8">
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <div
+      className="flex flex-col min-h-screen bg-dark-bg text-text-light font-body selection:bg-accent-gold selection:text-primary-dark"
+      style={{
+        backgroundImage: `
+          radial-gradient(at 20% 80%, hsla(260, 50%, 20%, 0.3) 0px, transparent 50%),
+          radial-gradient(at 80% 20%, hsla(280, 60%, 30%, 0.3) 0px, transparent 50%),
+          url('https://www.transparenttextures.com/patterns/stardust.png'),
+          linear-gradient(135deg, #12002b, #2C005E)
+        `,
+      }}
+    >
+      <Header />
+      <main className="flex-grow flex flex-col items-center justify-center container mx-auto p-4 sm:p-6 md:p-8">
+        <AnimatedRoutes />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
