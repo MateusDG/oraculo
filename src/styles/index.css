@@ -104,20 +104,16 @@ a:hover {
 /* Body */
 body {
   margin: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  min-width: 320px;
   min-height: 100vh;
-
-  /* fundo estrelado místico */
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.07) 0, transparent 50%),
-    linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-
-  font-family: inherit;
-  color: #fff; /* assegura contraste com fundo escuro */
+  background-color: #12002b; /* Fallback de cor de fundo */
+  background-image:
+    radial-gradient(at 20% 80%, hsla(260, 50%, 20%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 80% 20%, hsla(280, 60%, 30%, 0.3) 0px, transparent 50%),
+    url('https://www.transparenttextures.com/patterns/stardust.png'),
+    linear-gradient(135deg, #12002b, #2C005E);
+  background-attachment: fixed; /* Garante que o fundo não role com o conteúdo */
+  color: #F0E6FF; /* Cor de texto padrão do tema */
+  font-family: 'Inter', sans-serif; /* Fonte padrão do tema */
 }
 
 /* Títulos */

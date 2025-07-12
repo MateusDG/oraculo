@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import TarotCard from '../../components/common/TarotCard';
 import { tarotDeck } from '../../data/tarotData'; // Importando nosso baralho mockado
 import { FiRefreshCw, FiHome } from 'react-icons/fi'; // Ícones para os botões
 
 const ReadingPage = () => {
   const [drawnCards, setDrawnCards] = useState([]);
-  const [flippedStates, setFlippedStates] = useState([]); // Array de booleanos para cada carta
+  const [flippedStates, setFlippedStates] = useState([]);
+  const [activeCardIndex, setActiveCardIndex] = useState(null); // Novo estado para a carta ativa
 
-  // Número de cartas a serem sorteadas para esta leitura (ex: 3)
   const numberOfCardsToDraw = 3;
 
-  // Função para sortear cartas
   const drawCards = () => {
     const deckCopy = [...tarotDeck];
     const newDrawnCards = [];
@@ -21,7 +20,6 @@ const ReadingPage = () => {
 
     if (deckCopy.length < numberOfCardsToDraw) {
       console.error("Não há cartas suficientes no baralho para sortear.");
-      // Poderia adicionar um estado para mostrar essa mensagem ao usuário
       setDrawnCards([]);
       setFlippedStates([]);
       return;
@@ -30,24 +28,28 @@ const ReadingPage = () => {
     for (let i = 0; i < numberOfCardsToDraw; i++) {
       const randomIndex = Math.floor(Math.random() * deckCopy.length);
       newDrawnCards.push(deckCopy.splice(randomIndex, 1)[0]);
-      newFlippedStates.push(false); // Todas as cartas começam viradas para baixo
+      newFlippedStates.push(false);
     }
     setDrawnCards(newDrawnCards);
     setFlippedStates(newFlippedStates);
+    setActiveCardIndex(null); // Reseta a carta ativa ao sortear novas cartas
   };
 
-  // Sorteia as cartas quando o componente é montado pela primeira vez
   useEffect(() => {
     drawCards();
   }, []);
 
-  // Função para virar uma carta
   const handleFlipCard = (index) => {
-    setFlippedStates(prevStates => {
-      const newStates = [...prevStates];
-      newStates[index] = !newStates[index];
-      return newStates;
-    });
+    // Vira a carta se ainda não estiver virada
+    if (!flippedStates[index]) {
+      setFlippedStates(prevStates => {
+        const newStates = [...prevStates];
+        newStates[index] = true;
+        return newStates;
+      });
+    }
+    // Define a carta clicada como a ativa
+    setActiveCardIndex(index);
   };
 
   return (
@@ -83,31 +85,33 @@ const ReadingPage = () => {
         ))}
       </div>
 
-      {/* Área de Interpretação (aparece quando as cartas estão viradas) */}
-      {drawnCards.length > 0 && flippedStates.some(isFlipped => isFlipped) && (
-        <motion.div
-          className="w-full max-w-3xl bg-secondary/10 backdrop-blur-md p-6 rounded-lg shadow-xl space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <h2 className="font-title text-3xl text-goldAccent mb-4 text-center">Interpretações</h2>
-          {drawnCards.map((card, index) => (
-            flippedStates[index] && (
-              <motion.div
-                key={card.id + '-interpretation'}
-                className="p-4 bg-deepPurple/50 rounded shadow"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                <h3 className="font-title text-xl text-goldAccent">{card.name}</h3>
-                <p className="font-body text-lightText mt-1">{card.meaning}</p>
-              </motion.div>
-            )
-          ))}
-        </motion.div>
-      )}
+      {/* Área de Interpretação */}
+      <div className="w-full max-w-4xl mt-12 min-h-[180px] flex flex-col justify-center items-center">
+        <AnimatePresence mode="wait">
+          {activeCardIndex !== null && (
+            <motion.div
+              key={activeCardIndex} // Chave para forçar a re-renderização com animação
+              className="w-full bg-primary-dark/30 backdrop-blur-xl shadow-2xl border-accent-gold/20 rounded-2xl p-6 md:p-8 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+            >
+              <h2 className="font-heading text-3xl text-accent-gold mb-3">
+                {drawnCards[activeCardIndex].name}
+              </h2>
+              <p className="font-body text-text-light text-lg leading-relaxed">
+                {drawnCards[activeCardIndex].meaning}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        {activeCardIndex === null && (
+          <div className="text-center text-text-muted italic">
+            <p className="text-lg">Vire uma carta para revelar sua mensagem.</p>
+          </div>
+        )}
+      </div>
 
       {/* Botões de Ação */}
       <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center">
