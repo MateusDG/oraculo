@@ -15,8 +15,9 @@ import { GiMagicSwirl } from 'react-icons/gi'; // Ícone temático
  *
  * @param {Object} props - Propriedades do componente.
  * @param {Function} props.onClick - Função a ser chamada quando o botão é clicado.
+ * @param {string} props.text - O texto a ser exibido no botão.
  */
-const CallToActionButton = ({ onClick }) => {
+const CallToActionButton = ({ onClick, text = "Iniciar Leitura Agora" }) => {
   // Variantes de animação para o wrapper do botão (motion.div).
   const wrapperVariants = {
     hidden: { scale: 0.5, opacity: 0 },
@@ -84,7 +85,7 @@ const CallToActionButton = ({ onClick }) => {
         // sobrescrevam o tema do AntD se houver conflito direto na cor do texto do botão primário.
         // O tema do AntD para Button.colorTextPrimary já está definido como '#2C005E'.
       >
-        Iniciar Leitura Agora
+        {text}
       </Button>
     </motion.div>
   );

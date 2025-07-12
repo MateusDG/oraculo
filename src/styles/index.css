@@ -17,53 +17,53 @@
   src: url('../assets/fonts/CinzelDecorative-Bold.ttf') format('truetype');
 }
 
-/* Montserrat */
+/* Inter */
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400; /* Regular */
   font-display: swap;
-  src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/Inter-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Inter';
   font-style: italic;
   font-weight: 400; /* Regular Italic */
   font-display: swap;
-  src: url('../assets/fonts/Montserrat-Italic.ttf') format('truetype');
+  src: url('../assets/fonts/Inter-Italic.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 500; /* Medium */
   font-display: swap;
-  src: url('../assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  src: url('../assets/fonts/Inter-Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Inter';
   font-style: italic;
   font-weight: 500; /* Medium Italic */
   font-display: swap;
-  src: url('../assets/fonts/Montserrat-MediumItalic.ttf') format('truetype');
+  src: url('../assets/fonts/Inter-MediumItalic.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 700; /* Bold */
   font-display: swap;
-  src: url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  src: url('../assets/fonts/Inter-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: 'Inter';
   font-style: italic;
   font-weight: 700; /* Bold Italic */
   font-display: swap;
-  src: url('../assets/fonts/Montserrat-BoldItalic.ttf') format('truetype');
+  src: url('../assets/fonts/Inter-BoldItalic.ttf') format('truetype');
 }
 
 /* Diretivas Tailwind */
