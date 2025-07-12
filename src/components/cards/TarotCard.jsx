@@ -32,7 +32,7 @@ const TarotCard = ({ cardData, isFlipped, onClick }) => {
     transition: { type: "spring", stiffness: 250, damping: 15 },
   };
 
-  const backImage = '/src/assets/images/playing-cards/card_back.png';
+  const backImage = 'src/assets/images/playing-cards/card_black.png';
 
   return (
     <motion.div
