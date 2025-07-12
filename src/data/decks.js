@@ -5,7 +5,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 1,
     meaning: 'New beginnings, inspiration, and opportunities.',
-    phrase: 'A spark of a new idea.',
+    phrase: 'Na fagulha inaugural deste Ás cintila todo lenho do universo; é o ponto onde intenção se inflama e proclama: “criar é atear lume ao invisível”.',
     image: 'src/assets/images/playing-cards/clubs/Ace Of Clubs.png',
   },
   {
@@ -14,7 +14,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 2,
     meaning: 'Planning, decisions, and partnerships.',
-    phrase: 'The foundation is being laid.',
+    phrase: 'Diante de duas portas ardentes, o andarilho traça rotas; escolher é ato bélico da vontade, pois cada caminho não tomado vira cinza no vento.',
     image: 'src/assets/images/playing-cards/clubs/2 of Clubs.png',
   },
   {
@@ -23,7 +23,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 3,
     meaning: 'Expansion, growth, and teamwork.',
-    phrase: 'Your plans are coming to fruition.',
+    phrase: 'O explorador finca três estacas em terra estranha; daí a visão se expande como incêndio controlado que pressagia colheita de brasas promissoras.',
     image: 'src/assets/images/playing-cards/clubs/3 of Clubs.png',
   },
   {
@@ -32,7 +32,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 4,
     meaning: 'Stability, celebration, and harmony.',
-    phrase: 'A time of peace and joy.',
+    phrase: 'Quatro tochas elevam um pavilhão festivo; celebram não a glória momentânea, mas o lar construído para abrigar o fogo sem queimar seus guardiões.',
     image: 'src/assets/images/playing-cards/clubs/4 of Clubs.png',
   },
   {
@@ -41,7 +41,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 5,
     meaning: 'Conflict, competition, and challenges.',
-    phrase: 'A test of your strength and resilience.',
+    phrase: 'Cinco faíscas disputam o mesmo oxigênio; no caos do confronto germina a criatividade, pois brasas que se chocam geram centelhas de inovação.',
     image: 'src/assets/images/playing-cards/clubs/5 of Clubs.png',
   },
   {
@@ -50,7 +50,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 6,
     meaning: 'Victory, success, and recognition.',
-    phrase: 'Your efforts are being rewarded.',
+    phrase: 'O herói regressa montado na própria chama; o povo o aclama, ignorando que a mesma luz que aquece também projeta sombras sedentas por elogio.',
     image: 'src/assets/images/playing-cards/clubs/6 of Clubs.png',
   },
   {
@@ -59,7 +59,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 7,
     meaning: 'Courage, perseverance, and standing your ground.',
-    phrase: 'Defend your beliefs.',
+    phrase: 'No alto do farol flamejante ele defende território contra ventos contrários; perseverar é manter a chama ereta quando a noite tenta apagá-la.',
     image: 'src/assets/images/playing-cards/clubs/7 of Clubs.png',
   },
   {
@@ -68,7 +68,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 8,
     meaning: 'Action, speed, and progress.',
-    phrase: 'Things are moving quickly.',
+    phrase: 'Setas incandescentes cortam o ar com velocidade de pensamento; decisões rápidas são meteoros que iluminam breves segundos e ainda assim marcam o firmamento.',
     image: 'src/assets/images/playing-cards/clubs/8 of Clubs.png',
   },
   {
@@ -77,7 +77,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 9,
     meaning: 'Resilience, strength, and boundaries.',
-    phrase: 'You are stronger than you think.',
+    phrase: 'O vigia debruça-se sobre brasido quase extinto; a chama que sobrevive madrugadas prova que resiliência é fogo que se alimenta da própria cinza.',
     image: 'src/assets/images/playing-cards/clubs/9 of Clubs.png',
   },
   {
@@ -86,7 +86,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 10,
     meaning: 'Burdens, responsibility, and hard work.',
-    phrase: 'You are carrying a heavy load.',
+    phrase: 'Carregar feixes de lenha além do peso justo consome oxigênio da alma; aprender a soltar torna-se condição para que a chama não sucumba ao próprio fardo.',
     image: 'src/assets/images/playing-cards/clubs/10 of Clubs.png',
   },
   {
@@ -95,7 +95,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 11,
     meaning: 'Enthusiasm, new ideas, and exploration.',
-    phrase: 'A messenger of good news.',
+    phrase: 'O moço-centelha agita archotes em riste; seu entusiasmo irradia labaredas que contagiam, mas ainda precisa evitar incêndios onde deseja só calor.',
     image: 'src/assets/images/playing-cards/clubs/Jack Of Clubs.png',
   },
   {
@@ -104,7 +104,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 12,
     meaning: 'Confidence, independence, and determination.',
-    phrase: 'A charismatic and determined leader.',
+    phrase: 'Chama-rainha, ela adorna a noite com clarões magnéticos; seu carisma inflama mariposas e transforma insegurança alheia em brasa de autoconfiança.',
     image: 'src/assets/images/playing-cards/clubs/Queen of Clubs.png',
   },
   {
@@ -113,7 +113,7 @@ export const playingCardTarot = [
     suit: 'clubs',
     value: 13,
     meaning: 'Leadership, vision, and authority.',
-    phrase: 'A natural-born leader.',
+    phrase: 'Soberano do fogo futuro, enxerga trilhas luminosas onde os demais veem trevas; decide com destreza, pois conhece o mapa que a faísca grava no escuro.',
     image: 'src/assets/images/playing-cards/clubs/King of Clubs.png',
   },
   {
@@ -122,7 +122,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 1,
     meaning: 'New opportunities, manifestation, and prosperity.',
-    phrase: 'A seed of prosperity has been planted.',
+    phrase: 'No seio de uma única semente cintila a memória de todas as colheitas; este Ás recorda que o ouro verdadeiro germina devagar sob o húmus de decisões conscientes.',
     image: 'src/assets/images/playing-cards/clubs/Ace Of Diamonds.png',
   },
   {
@@ -131,7 +131,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 2,
     meaning: 'Balance, adaptability, and managing priorities.',
-    phrase: 'Juggling resources and responsibilities.',
+    phrase: 'Duas moedas giram em malabarismo sutil; parceria material exige ritmo, pois equilíbrio é dança que transforma peso em sincronia lucrativa.',
     image: 'src/assets/images/playing-cards/clubs/2 of Diamonds.png',
   },
   {
@@ -140,7 +140,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 3,
     meaning: 'Collaboration, teamwork, and shared goals.',
-    phrase: 'Working together to achieve a common goal.',
+    phrase: 'Três artesãos martelam o mesmo sonho; o ofício compartilhado transforma ruído em sinfonia de pedra, provando que riqueza nasce do coro das habilidades.',
     image: 'src/assets/images/playing-cards/clubs/3 of Diamonds.png',
   },
   {
@@ -149,7 +149,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 4,
     meaning: 'Security, stability, and possessiveness.',
-    phrase: 'Holding on to what you have.',
+    phrase: 'Cofre de quatro trancas guarda tesouros e medos; controlar demais endurece o fluxo, convertendo abundância em estátua que não respira.',
     image: 'src/assets/images/playing-cards/clubs/4 of Diamonds.png',
   },
   {
@@ -158,7 +158,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 5,
     meaning: 'Financial loss, hardship, and insecurity.',
-    phrase: 'A time of financial difficulty.',
+    phrase: 'Vagando na nevasca da carência, o andarilho aprende que valor nada tem a ver com frio das moedas, mas com o calor do abrigo partilhado.',
     image: 'src/assets/images/playing-cards/clubs/5 of Diamonds.png',
   },
   {
@@ -167,7 +167,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 6,
     meaning: 'Generosity, charity, and sharing wealth.',
-    phrase: 'Giving and receiving.',
+    phrase: 'Mãos que dão encontram dedos que recebem; generosidade é corrente elétrica que só acende lâmpadas quando circula em circuito completo.',
     image: 'src/assets/images/playing-cards/clubs/6 of Diamonds.png',
   },
   {
@@ -176,7 +176,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 7,
     meaning: 'Patience, investment, and long-term vision.',
-    phrase: 'Waiting for your investments to grow.',
+    phrase: 'O jardineiro avalia brotos dourados; a paciência, juro invisível do esforço, faz cada fruto amadurecer ao compasso de um sino que só o tempo escuta.',
     image: 'src/assets/images/playing-cards/clubs/7 of Diamonds.png',
   },
   {
@@ -185,7 +185,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 8,
     meaning: 'Skill, craftsmanship, and attention to detail.',
-    phrase: 'Honing your skills.',
+    phrase: 'O artesão repete o golpe no cinzel até que a rocha confesse beleza; maestria é namoro prolongado entre atenção e matéria.',
     image: 'src/assets/images/playing-cards/clubs/8 of Diamonds.png',
   },
   {
@@ -194,7 +194,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 9,
     meaning: 'Abundance, luxury, and self-sufficiency.',
-    phrase: 'Enjoying the fruits of your labor.',
+    phrase: 'De pé no vinhedo que plantou, ele sorri sozinho; autonomia tem aroma de uva madura e sabor de liberdade que não necessita testemunho.',
     image: 'src/assets/images/playing-cards/clubs/9 of Diamonds.png',
   },
   {
@@ -203,7 +203,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 10,
     meaning: 'Wealth, inheritance, and family legacy.',
-    phrase: 'A lasting legacy.',
+    phrase: 'Sob o dossel da árvore genealógica, moedas caem como folhas abundantes; legado é raiz que alimenta descendentes mesmo depois que o tronco vira pó.',
     image: 'src/assets/images/playing-cards/clubs/10 of Diamonds.png',
   },
   {
@@ -212,7 +212,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 11,
     meaning: 'Ambition, new ventures, and manifestation.',
-    phrase: 'A messenger of financial opportunities.',
+    phrase: 'O mensageiro de negócios chega com olhos faiscantes; suas ideias são pepitas em bruto que prometem minas a quem ousar lapidar.',
     image: 'src/assets/images/playing-cards/clubs/Jack Of Diamonds.png',
   },
   {
@@ -221,7 +221,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 12,
     meaning: 'Nurturing, practical, and down-to-earth.',
-    phrase: 'A practical and resourceful woman.',
+    phrase: 'Mãe-terra coroada, ela transforma trigo em pão e déficit em investimento; seu toque revela que prosperidade é cuidado traduzido em matéria.',
     image: 'src/assets/images/playing-cards/clubs/Queen of Diamonds.png',
   },
   {
@@ -230,7 +230,7 @@ export const playingCardTarot = [
     suit: 'diamonds',
     value: 13,
     meaning: 'Abundance, success, and mastery.',
-    phrase: 'A successful and generous man.',
+    phrase: 'O rei-mercador negocia destinos sobre mapas de rotas antigas; conhece o preço da terra e o valor invisível do olhar que confia.',
     image: 'src/assets/images/playing-cards/clubs/King of Diamonds.png',
   },
   {
@@ -239,7 +239,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 1,
     meaning: 'Love, new relationships, and emotional beginnings.',
-    phrase: 'A new chapter in your emotional life.',
+    phrase: 'Como a fonte primordial que jorra silenciosa no seio da montanha, este Ás anuncia o instante zero do amor, onde cada pulsar é promessa de maré infinita.',
     image: 'src/assets/images/playing-cards/clubs/Ace Of Hearts.png',
   },
   {
@@ -248,7 +248,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 2,
     meaning: 'Partnership, connection, and mutual attraction.',
-    phrase: 'A deep connection with another.',
+    phrase: 'Duas taças tilintam numa concha de luz; ao encontrarem-se, selam o pacto de espelhos que redescobrem no “nós” a dança primordial do sentimento compartilhado.',
     image: 'src/assets/images/playing-cards/clubs/2 Of Hearts.png',
   },
   {
@@ -257,7 +257,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 3,
     meaning: 'Celebration, friendship, and community.',
-    phrase: 'A time of joyful celebration.',
+    phrase: 'O riso ecoa em coro de três, lembrando que toda alegria verdadeira é comunhão que transborda, espalhando pétalas de júbilo sobre o chão fértil das relações.',
     image: 'src/assets/images/playing-cards/clubs/3 Of Hearts.png',
   },
   {
@@ -266,7 +266,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 4,
     meaning: 'Apathy, introspection, and emotional withdrawal.',
-    phrase: 'A need for emotional contemplation.',
+    phrase: 'Quatro pilares de afeto erguem um templo doméstico onde a alma pode repousar; ali, segurança não é prisão, mas quietude que acolhe e nutre.',
     image: 'src/assets/images/playing-cards/clubs/4 Of Hearts.png',
   },
   {
@@ -275,7 +275,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 5,
     meaning: 'Loss, grief, and disappointment.',
-    phrase: 'A time of emotional healing.',
+    phrase: 'Quando uma taça se parte, o vinho penetra o solo; a dor desse derramamento revela tesouros ocultos, pois só quem perde descobre as minas que ainda brilham dentro do peito.',
     image: 'src/assets/images/playing-cards/clubs/5 Of Hearts.png',
   },
   {
@@ -284,7 +284,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 6,
     meaning: 'Nostalgia, childhood memories, and innocence.',
-    phrase: 'A trip down memory lane.',
+    phrase: 'Nos contornos sépia de uma fotografia antiga, a ternura infantil atravessa o tempo, provando que lembrança é ponte sem ferrugem por onde ainda corre o frescor da inocência.',
     image: 'src/assets/images/playing-cards/clubs/6 Of Hearts.png',
   },
   {
@@ -293,7 +293,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 7,
     meaning: 'Choices, illusion, and wishful thinking.',
-    phrase: 'A need to make a decision.',
+    phrase: 'Sete espelhos d’água projetam mundos tentadores; mergulhar sem discernimento pode afogar a clareza, mas quem sabe escolher bebe a essência do verdadeiro anseio.',
     image: 'src/assets/images/playing-cards/clubs/7 Of Hearts.png',
   },
   {
@@ -302,7 +302,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 8,
     meaning: 'Emotional detachment, moving on, and seeking something more.',
-    phrase: 'A desire for a deeper emotional connection.',
+    phrase: 'O viajante do coração levanta âncora; abandona a enseada conhecida para que a maré da autenticidade o conduza a horizontes que a saudade ainda não nomeou.',
     image: 'src/assets/images/playing-cards/clubs/8 Of Hearts.png',
   },
   {
@@ -311,7 +311,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 9,
     meaning: 'Contentment, satisfaction, and emotional fulfillment.',
-    phrase: 'A wish come true.',
+    phrase: 'O deleite derrama-se em cascata rubi, saturando os sentidos; contudo, entende que a satisfação maior nasce quando partilha o néctar excedente com os sedentos ao redor.',
     image: 'src/assets/images/playing-cards/clubs/9 Of Hearts.png',
   },
   {
@@ -320,7 +320,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 10,
     meaning: 'Family, harmony, and emotional fulfillment.',
-    phrase: 'A happy and fulfilling home life.',
+    phrase: 'Neste banquete de águas unidas, famílias de peixes dançam sob arco-íris; plenitude é correnteza coletiva onde cada escama cintila a vitória de todos.',
     image: 'src/assets/images/playing-cards/clubs/10 Of Hearts.png',
   },
   {
@@ -329,7 +329,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 11,
     meaning: 'Romance, charm, and emotional maturity.',
-    phrase: 'A messenger of love.',
+    phrase: 'O mensageiro traz cartas úmidas de orvalho sentimental; sua juventude lateja na tinta e lembra que toda notícia de afeto é convite a sentir de novo.',
     image: 'src/assets/images/playing-cards/clubs/Jack Of Hearts.png',
   },
   {
@@ -338,7 +338,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 12,
     meaning: 'Compassion, nurturing, and emotional intelligence.',
-    phrase: 'A compassionate and loving woman.',
+    phrase: 'Rainha-lagoa, ela conhece as marés lunares do humor; em seu regaço regressam náufragos, pois seus braços desenham o abraço que antecipa o perdão.',
     image: 'src/assets/images/playing-cards/clubs/Queen of Hearts.png',
   },
   {
@@ -347,7 +347,7 @@ export const playingCardTarot = [
     suit: 'hearts',
     value: 13,
     meaning: 'Emotional mastery, compassion, and wisdom.',
-    phrase: 'A kind and compassionate man.',
+    phrase: 'O Rei oceânico ergue o tridente do cuidado, guiando correntes com firmeza suave; líder é quem domestica tempestades sem amputar a liberdade das ondas.',
     image: 'src/assets/images/playing-cards/clubs/King of Hearts.png',
   },
   {
@@ -356,7 +356,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 1,
     meaning: 'Clarity, truth, and mental breakthroughs.',
-    phrase: 'A moment of profound clarity.',
+    phrase: 'Lâmina mental ergue-se da neblina como relâmpago vertical; corta as nuvens da confusão, oferecendo clarão de verdade que tanto pode guiar quanto cegar.',
     image: 'src/assets/images/playing-cards/clubs/Ace Of Spades.png',
   },
   {
@@ -365,7 +365,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 2,
     meaning: 'Indecision, stalemate, and difficult choices.',
-    phrase: 'A difficult decision needs to be made.',
+    phrase: 'Duas espadas cruzadas sobre a lua espelhada insinuam duelo interno; a hesitação é sala de batalha onde silêncio pesa mais que qualquer grito.',
     image: 'src/assets/images/playing-cards/clubs/2 Of Spades.png',
   },
   {
@@ -374,7 +374,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 3,
     meaning: 'Heartbreak, sorrow, and painful truth.',
-    phrase: 'A painful realization.',
+    phrase: 'No coração trespassado, a dor revela costuras da razão; cada gota caída escreve com sangue o tratado da experiência que ensina a pensar sentindo.',
     image: 'src/assets/images/playing-cards/clubs/3 Of Spades.png',
   },
   {
@@ -383,7 +383,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 4,
     meaning: 'Rest, contemplation, and mental recuperation.',
-    phrase: 'A need for rest and recovery.',
+    phrase: 'A lâmina repousa sobre pedra fria; descanso não é fuga, mas afiação invisível que prepara a mente para a próxima tempestade de ideias.',
     image: 'src/assets/images/playing-cards/clubs/4 Of Spades.png',
   },
   {
@@ -392,7 +392,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 5,
     meaning: 'Defeat, conflict, and betrayal.',
-    phrase: 'A painful defeat.',
+    phrase: 'Entre destroços de orgulho, o vencedor ergue espada vazia; a conquista sem compaixão ecoa numa planície deserta onde troféus se oxidam sozinhos.',
     image: 'src/assets/images/playing-cards/clubs/5 Of Spades.png',
   },
   {
@@ -401,7 +401,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 6,
     meaning: 'Transition, moving on, and leaving the past behind.',
-    phrase: 'A journey to a better place.',
+    phrase: 'A barca em águas cinzentas carrega pensamentos que já não servem; travessia é abandonar pesadelos como velas rasgadas para capturar ventos de mudança.',
     image: 'src/assets/images/playing-cards/clubs/6 Of Spades.png',
   },
   {
@@ -410,7 +410,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 7,
     meaning: 'Deception, betrayal, and hidden agendas.',
-    phrase: 'Something is not as it seems.',
+    phrase: 'Sombra furtiva recolhe ideias como lâminas roubadas; o estrategista prefere a sutileza ao confronto, porém arrisca ferir-se no próprio golpe.',
     image: 'src/assets/images/playing-cards/clubs/7 Of Spades.png',
   },
   {
@@ -419,7 +419,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 8,
     meaning: 'Limiting beliefs, self-imprisonment, and feeling trapped.',
-    phrase: 'You are your own worst enemy.',
+    phrase: 'Grilhões invisíveis apertam quando o medo decreta sentença; basta um sopro de lucidez para notar que as grades são de ar esperando ser atravessadas.',
     image: 'src/assets/images/playing-cards/clubs/8 Of Spades.png',
   },
   {
@@ -428,7 +428,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 9,
     meaning: 'Anxiety, fear, and nightmares.',
-    phrase: 'Your fears are getting the best of you.',
+    phrase: 'No deserto insone, pensamentos giram como dervixes cortantes; pesadelos provam que a mente sem alento é forja que martela sem pausas.',
     image: 'src/assets/images/playing-cards/clubs/9 Of Spades.png',
   },
   {
@@ -437,7 +437,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 10,
     meaning: 'Ruin, endings, and rock bottom.',
-    phrase: 'The end of a difficult cycle.',
+    phrase: 'Sob a cortina negra do fim absoluto nasce o ponto zero; aceitar o colapso da ideia inaugura horizonte onde novos significados florescem.',
     image: 'src/assets/images/playing-cards/clubs/10 Of Spades.png',
   },
   {
@@ -446,7 +446,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 11,
     meaning: 'Curiosity, intellect, and a thirst for knowledge.',
-    phrase: 'A messenger of truth.',
+    phrase: 'O jovem heraldo empunha pergaminhos que soam como espadas; sua curiosidade perfura dogmas, espalhando rumores de renovação intelectual.',
     image: 'src/assets/images/playing-cards/clubs/Jack Of Spades.png',
   },
   {
@@ -455,7 +455,7 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 12,
     meaning: 'Intelligence, independence, and sharp wit.',
-    phrase: 'A sharp and intelligent woman.',
+    phrase: 'Sábia lâmina feminina, ela fende ilusões com precisão cirúrgica; ao ferir a mentira, costura veredictos que preservam a integridade do todo.',
     image: 'src/assets/images/playing-cards/clubs/Queen of Spades.png',
   },
   {
@@ -464,7 +464,25 @@ export const playingCardTarot = [
     suit: 'spades',
     value: 13,
     meaning: 'Intellectual authority, truth, and justice.',
-    phrase: 'A wise and just man.',
+    phrase: 'Monarca-vento, sua palavra é decreto que sustenta pontes de lógica; governa impartindo cortes justos, porque poder é fio que deve permanecer reto.',
     image: 'src/assets/images/playing-cards/clubs/King Of Spades.png',
+  },
+  {
+    id: 'joker-1',
+    name: 'Joker',
+    suit: 'joker',
+    value: 0,
+    meaning: 'Folly, spontaneity, and new beginnings.',
+    phrase: 'Com um riso que cintila como confete incendiado, ele pisa na linha tênue entre gênio e loucura; braço esquerdo ergue a tocha da criação, braço direito gira o espelho da sátira, lembrando que todo começo autêntico nasce do ato de zombar da ordem que o precede.',
+    image: 'src/assets/images/playing-cards/clubs/Joker.jpg',
+  },
+  {
+    id: 'joker-2',
+    name: 'Joker',
+    suit: 'joker',
+    value: 0,
+    meaning: 'Chaos, disruption, and unexpected events.',
+    phrase: 'Silencioso como corvo à meia-noite, ele desliza entre as sombras do baralho trazendo nos bolsos todas as máscaras; ao surgir, rompe cadeias narrativas e comprova que no intervalo entre a última carta e o baralho embaralhado mora o poder de renascer sem pedir permissão ao passado.”',
+    image: 'src/assets/images/playing-cards/clubs/Joker (1).jpg',
   },
 ];
