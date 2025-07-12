@@ -32,11 +32,11 @@ const TarotCard = ({ cardData, isFlipped, onClick }) => {
     transition: { type: "spring", stiffness: 250, damping: 15 },
   };
 
-  const backImage = 'src/assets/images/playing-cards/card_black.png';
+  const backImage = '/src/assets/images/playing-cards/card_back.png';
 
   return (
     <motion.div
-      className="w-full h-full cursor-pointer relative"
+      className="w-[180px] h-[246px] md:w-[200px] md:h-[273px] cursor-pointer relative"
       onClick={onClick}
       whileHover={hoverEffect}
       style={{ perspective: '1200px' }}
@@ -53,7 +53,7 @@ const TarotCard = ({ cardData, isFlipped, onClick }) => {
           className="absolute w-full h-full rounded-xl shadow-lg overflow-hidden border-2 border-accent-gold/50"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          <img src={backImage} alt="Verso da Carta de Tarot" className="w-full h-full object-fill" />
+          <img src={backImage} alt="Verso da Carta de Tarot" className="w-full h-full object-cover" />
         </div>
 
         {/* Frente da Carta */}
@@ -61,7 +61,7 @@ const TarotCard = ({ cardData, isFlipped, onClick }) => {
           className="absolute w-full h-full rounded-xl shadow-lg overflow-hidden border-2 border-accent-gold-light/80 bg-primary-dark"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
-          <img src={image} alt={`Carta: ${name}`} className="w-full h-full object-fill" />
+          <img src={image} alt={`Carta: ${name}`} className="w-full h-full object-cover" />
           {/* Opcional: Adicionar o nome da carta sobreposto na imagem */}
           <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
             <h3 className="text-center font-heading text-text-light text-md tracking-wider">
