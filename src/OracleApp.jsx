@@ -71,14 +71,6 @@ const OracleApp = () => {
   return (
     <div
       className="flex flex-col min-h-screen bg-dark-bg text-text-light font-body selection:bg-accent-gold selection:text-primary-dark"
-      style={{
-        backgroundImage: `
-          radial-gradient(at 20% 80%, hsla(260, 50%, 20%, 0.3) 0px, transparent 50%),
-          radial-gradient(at 80% 20%, hsla(280, 60%, 30%, 0.3) 0px, transparent 50%),
-          url('https://www.transparenttextures.com/patterns/stardust.png'),
-          linear-gradient(135deg, #12002b, #2C005E)
-        `,
-      }}
     >
       <Header />
       <main className="flex-grow flex flex-col items-center justify-center container mx-auto p-4 sm:p-6 md:p-8">
