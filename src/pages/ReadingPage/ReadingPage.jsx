@@ -8,31 +8,21 @@ import { FiRefreshCw, FiHome } from 'react-icons/fi'; // Ícones para os botões
 
 const ReadingPage = () => {
   const [drawnCards, setDrawnCards] = useState([]);
-  const [flippedStates, setFlippedStates] = useState([]);
-  const [activeCardIndex, setActiveCardIndex] = useState(null); // Novo estado para a carta ativa
+  const [flippedIndexes, setFlippedIndexes] = useState(new Set());
+  const [activeCardIndex, setActiveCardIndex] = useState(null);
 
   const numberOfCardsToDraw = 3;
 
   const drawCards = () => {
     const deckCopy = [...tarotDeck];
     const newDrawnCards = [];
-    const newFlippedStates = [];
-
-    if (deckCopy.length < numberOfCardsToDraw) {
-      console.error("Não há cartas suficientes no baralho para sortear.");
-      setDrawnCards([]);
-      setFlippedStates([]);
-      return;
-    }
-
     for (let i = 0; i < numberOfCardsToDraw; i++) {
       const randomIndex = Math.floor(Math.random() * deckCopy.length);
       newDrawnCards.push(deckCopy.splice(randomIndex, 1)[0]);
-      newFlippedStates.push(false);
     }
     setDrawnCards(newDrawnCards);
-    setFlippedStates(newFlippedStates);
-    setActiveCardIndex(null); // Reseta a carta ativa ao sortear novas cartas
+    setFlippedIndexes(new Set()); // Reseta o Set de cartas viradas
+    setActiveCardIndex(null);   // Reseta a carta ativa
   };
 
   useEffect(() => {
@@ -40,16 +30,15 @@ const ReadingPage = () => {
   }, []);
 
   const handleFlipCard = (index) => {
-    // Vira a carta se ainda não estiver virada
-    if (!flippedStates[index]) {
-      setFlippedStates(prevStates => {
-        const newStates = [...prevStates];
-        newStates[index] = true;
-        return newStates;
+    // Atualiza ambos os estados de forma síncrona
+    setActiveCardIndex(index);
+    if (!flippedIndexes.has(index)) {
+      setFlippedIndexes(prevFlipped => {
+        const newFlipped = new Set(prevFlipped);
+        newFlipped.add(index);
+        return newFlipped;
       });
     }
-    // Define a carta clicada como a ativa
-    setActiveCardIndex(index);
   };
 
   return (
@@ -83,7 +72,8 @@ const ReadingPage = () => {
             <TarotCard
               key={card.id}
               cardData={card}
-              isFlipped={flippedStates[index]}
+              isFlipped={flippedIndexes.has(index)}
+              isActive={activeCardIndex === index}
               onClick={() => handleFlipCard(index)}
             />
           ))}
