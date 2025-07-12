@@ -106,7 +106,7 @@ const ReadingPage = () => {
                     <Card
                       title={card.name}
                       className="bg-primary-dark/50 border border-accent-gold/20 shadow-lg text-left h-full"
-                      headStyle={{ color: 'var(--ant-color-primary)', fontFamily: 'var(--ant-font-family-heading)', borderBottom: '1px solid var(--ant-color-border-secondary)' }}
+                      styles={{ header: { color: 'var(--ant-color-primary)', fontFamily: 'var(--ant-font-family-heading)', borderBottom: '1px solid var(--ant-color-border-secondary)' } }}
                     >
                       <Paragraph className="text-text-light font-body text-base">{card.meaning}</Paragraph>
                       <Divider className="border-accent-gold/20 my-4" />
