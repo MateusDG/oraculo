@@ -123,7 +123,7 @@ export const playingCardTarot = [
     value: 1,
     meaning: 'New opportunities, manifestation, and prosperity.',
     phrase: 'A seed of prosperity has been planted.',
-    image: 'src/assets/images/playing-cards/diamonds/Ace Of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/Ace Of Diamonds.png',
   },
   {
     id: 'diamonds-2',
@@ -132,7 +132,7 @@ export const playingCardTarot = [
     value: 2,
     meaning: 'Balance, adaptability, and managing priorities.',
     phrase: 'Juggling resources and responsibilities.',
-    image: 'src/assets/images/playing-cards/diamonds/2 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/2 of Diamonds.png',
   },
   {
     id: 'diamonds-3',
@@ -141,7 +141,7 @@ export const playingCardTarot = [
     value: 3,
     meaning: 'Collaboration, teamwork, and shared goals.',
     phrase: 'Working together to achieve a common goal.',
-    image: 'src/assets/images/playing-cards/diamonds/3 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/3 of Diamonds.png',
   },
   {
     id: 'diamonds-4',
@@ -150,7 +150,7 @@ export const playingCardTarot = [
     value: 4,
     meaning: 'Security, stability, and possessiveness.',
     phrase: 'Holding on to what you have.',
-    image: 'src/assets/images/playing-cards/diamonds/4 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/4 of Diamonds.png',
   },
   {
     id: 'diamonds-5',
@@ -159,7 +159,7 @@ export const playingCardTarot = [
     value: 5,
     meaning: 'Financial loss, hardship, and insecurity.',
     phrase: 'A time of financial difficulty.',
-    image: 'src/assets/images/playing-cards/diamonds/5 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/5 of Diamonds.png',
   },
   {
     id: 'diamonds-6',
@@ -168,7 +168,7 @@ export const playingCardTarot = [
     value: 6,
     meaning: 'Generosity, charity, and sharing wealth.',
     phrase: 'Giving and receiving.',
-    image: 'src/assets/images/playing-cards/diamonds/6 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/6 of Diamonds.png',
   },
   {
     id: 'diamonds-7',
@@ -177,7 +177,7 @@ export const playingCardTarot = [
     value: 7,
     meaning: 'Patience, investment, and long-term vision.',
     phrase: 'Waiting for your investments to grow.',
-    image: 'src/assets/images/playing-cards/diamonds/7 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/7 of Diamonds.png',
   },
   {
     id: 'diamonds-8',
@@ -186,7 +186,7 @@ export const playingCardTarot = [
     value: 8,
     meaning: 'Skill, craftsmanship, and attention to detail.',
     phrase: 'Honing your skills.',
-    image: 'src/assets/images/playing-cards/diamonds/8 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/8 of Diamonds.png',
   },
   {
     id: 'diamonds-9',
@@ -195,7 +195,7 @@ export const playingCardTarot = [
     value: 9,
     meaning: 'Abundance, luxury, and self-sufficiency.',
     phrase: 'Enjoying the fruits of your labor.',
-    image: 'src/assets/images/playing-cards/diamonds/9 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/9 of Diamonds.png',
   },
   {
     id: 'diamonds-10',
@@ -204,7 +204,7 @@ export const playingCardTarot = [
     value: 10,
     meaning: 'Wealth, inheritance, and family legacy.',
     phrase: 'A lasting legacy.',
-    image: 'src/assets/images/playing-cards/diamonds/10 of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/10 of Diamonds.png',
   },
   {
     id: 'diamonds-jack',
@@ -213,7 +213,7 @@ export const playingCardTarot = [
     value: 11,
     meaning: 'Ambition, new ventures, and manifestation.',
     phrase: 'A messenger of financial opportunities.',
-    image: 'src/assets/images/playing-cards/diamonds/Jack Of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/Jack Of Diamonds.png',
   },
   {
     id: 'diamonds-queen',
@@ -222,7 +222,7 @@ export const playingCardTarot = [
     value: 12,
     meaning: 'Nurturing, practical, and down-to-earth.',
     phrase: 'A practical and resourceful woman.',
-    image: 'src/assets/images/playing-cards/diamonds/Queen of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/Queen of Diamonds.png',
   },
   {
     id: 'diamonds-king',
@@ -231,7 +231,7 @@ export const playingCardTarot = [
     value: 13,
     meaning: 'Abundance, success, and mastery.',
     phrase: 'A successful and generous man.',
-    image: 'src/assets/images/playing-cards/diamonds/King of Diamonds.png',
+    image: 'src/assets/images/playing-cards/clubs/King of Diamonds.png',
   },
   {
     id: 'hearts-ace',
@@ -240,7 +240,7 @@ export const playingCardTarot = [
     value: 1,
     meaning: 'Love, new relationships, and emotional beginnings.',
     phrase: 'A new chapter in your emotional life.',
-    image: 'src/assets/images/playing-cards/hearts/Ace Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/Ace Of Hearts.png',
   },
   {
     id: 'hearts-2',
@@ -249,7 +249,7 @@ export const playingCardTarot = [
     value: 2,
     meaning: 'Partnership, connection, and mutual attraction.',
     phrase: 'A deep connection with another.',
-    image: 'src/assets/images/playing-cards/hearts/2 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/2 Of Hearts.png',
   },
   {
     id: 'hearts-3',
@@ -258,7 +258,7 @@ export const playingCardTarot = [
     value: 3,
     meaning: 'Celebration, friendship, and community.',
     phrase: 'A time of joyful celebration.',
-    image: 'src/assets/images/playing-cards/hearts/3 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/3 Of Hearts.png',
   },
   {
     id: 'hearts-4',
@@ -267,7 +267,7 @@ export const playingCardTarot = [
     value: 4,
     meaning: 'Apathy, introspection, and emotional withdrawal.',
     phrase: 'A need for emotional contemplation.',
-    image: 'src/assets/images/playing-cards/hearts/4 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/4 Of Hearts.png',
   },
   {
     id: 'hearts-5',
@@ -276,7 +276,7 @@ export const playingCardTarot = [
     value: 5,
     meaning: 'Loss, grief, and disappointment.',
     phrase: 'A time of emotional healing.',
-    image: 'src/assets/images/playing-cards/hearts/5 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/5 Of Hearts.png',
   },
   {
     id: 'hearts-6',
@@ -285,7 +285,7 @@ export const playingCardTarot = [
     value: 6,
     meaning: 'Nostalgia, childhood memories, and innocence.',
     phrase: 'A trip down memory lane.',
-    image: 'src/assets/images/playing-cards/hearts/6 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/6 Of Hearts.png',
   },
   {
     id: 'hearts-7',
@@ -294,7 +294,7 @@ export const playingCardTarot = [
     value: 7,
     meaning: 'Choices, illusion, and wishful thinking.',
     phrase: 'A need to make a decision.',
-    image: 'src/assets/images/playing-cards/hearts/7 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/7 Of Hearts.png',
   },
   {
     id: 'hearts-8',
@@ -303,7 +303,7 @@ export const playingCardTarot = [
     value: 8,
     meaning: 'Emotional detachment, moving on, and seeking something more.',
     phrase: 'A desire for a deeper emotional connection.',
-    image: 'src/assets/images/playing-cards/hearts/8 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/8 Of Hearts.png',
   },
   {
     id: 'hearts-9',
@@ -312,7 +312,7 @@ export const playingCardTarot = [
     value: 9,
     meaning: 'Contentment, satisfaction, and emotional fulfillment.',
     phrase: 'A wish come true.',
-    image: 'src/assets/images/playing-cards/hearts/9 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/9 Of Hearts.png',
   },
   {
     id: 'hearts-10',
@@ -321,7 +321,7 @@ export const playingCardTarot = [
     value: 10,
     meaning: 'Family, harmony, and emotional fulfillment.',
     phrase: 'A happy and fulfilling home life.',
-    image: 'src/assets/images/playing-cards/hearts/10 Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/10 Of Hearts.png',
   },
   {
     id: 'hearts-jack',
@@ -330,7 +330,7 @@ export const playingCardTarot = [
     value: 11,
     meaning: 'Romance, charm, and emotional maturity.',
     phrase: 'A messenger of love.',
-    image: 'src/assets/images/playing-cards/hearts/Jack Of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/Jack Of Hearts.png',
   },
   {
     id: 'hearts-queen',
@@ -339,7 +339,7 @@ export const playingCardTarot = [
     value: 12,
     meaning: 'Compassion, nurturing, and emotional intelligence.',
     phrase: 'A compassionate and loving woman.',
-    image: 'src/assets/images/playing-cards/hearts/Queen of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/Queen of Hearts.png',
   },
   {
     id: 'hearts-king',
@@ -348,7 +348,7 @@ export const playingCardTarot = [
     value: 13,
     meaning: 'Emotional mastery, compassion, and wisdom.',
     phrase: 'A kind and compassionate man.',
-    image: 'src/assets/images/playing-cards/hearts/King of Hearts.png',
+    image: 'src/assets/images/playing-cards/clubs/King of Hearts.png',
   },
   {
     id: 'spades-ace',
@@ -357,7 +357,7 @@ export const playingCardTarot = [
     value: 1,
     meaning: 'Clarity, truth, and mental breakthroughs.',
     phrase: 'A moment of profound clarity.',
-    image: 'src/assets/images/playing-cards/spades/Ace Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/Ace Of Spades.png',
   },
   {
     id: 'spades-2',
@@ -366,7 +366,7 @@ export const playingCardTarot = [
     value: 2,
     meaning: 'Indecision, stalemate, and difficult choices.',
     phrase: 'A difficult decision needs to be made.',
-    image: 'src/assets/images/playing-cards/spades/2 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/2 Of Spades.png',
   },
   {
     id: 'spades-3',
@@ -375,7 +375,7 @@ export const playingCardTarot = [
     value: 3,
     meaning: 'Heartbreak, sorrow, and painful truth.',
     phrase: 'A painful realization.',
-    image: 'src/assets/images/playing-cards/spades/3 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/3 Of Spades.png',
   },
   {
     id: 'spades-4',
@@ -384,7 +384,7 @@ export const playingCardTarot = [
     value: 4,
     meaning: 'Rest, contemplation, and mental recuperation.',
     phrase: 'A need for rest and recovery.',
-    image: 'src/assets/images/playing-cards/spades/4 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/4 Of Spades.png',
   },
   {
     id: 'spades-5',
@@ -393,7 +393,7 @@ export const playingCardTarot = [
     value: 5,
     meaning: 'Defeat, conflict, and betrayal.',
     phrase: 'A painful defeat.',
-    image: 'src/assets/images/playing-cards/spades/5 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/5 Of Spades.png',
   },
   {
     id: 'spades-6',
@@ -402,7 +402,7 @@ export const playingCardTarot = [
     value: 6,
     meaning: 'Transition, moving on, and leaving the past behind.',
     phrase: 'A journey to a better place.',
-    image: 'src/assets/images/playing-cards/spades/6 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/6 Of Spades.png',
   },
   {
     id: 'spades-7',
@@ -411,7 +411,7 @@ export const playingCardTarot = [
     value: 7,
     meaning: 'Deception, betrayal, and hidden agendas.',
     phrase: 'Something is not as it seems.',
-    image: 'src/assets/images/playing-cards/spades/7 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/7 Of Spades.png',
   },
   {
     id: 'spades-8',
@@ -420,7 +420,7 @@ export const playingCardTarot = [
     value: 8,
     meaning: 'Limiting beliefs, self-imprisonment, and feeling trapped.',
     phrase: 'You are your own worst enemy.',
-    image: 'src/assets/images/playing-cards/spades/8 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/8 Of Spades.png',
   },
   {
     id: 'spades-9',
@@ -429,7 +429,7 @@ export const playingCardTarot = [
     value: 9,
     meaning: 'Anxiety, fear, and nightmares.',
     phrase: 'Your fears are getting the best of you.',
-    image: 'src/assets/images/playing-cards/spades/9 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/9 Of Spades.png',
   },
   {
     id: 'spades-10',
@@ -438,7 +438,7 @@ export const playingCardTarot = [
     value: 10,
     meaning: 'Ruin, endings, and rock bottom.',
     phrase: 'The end of a difficult cycle.',
-    image: 'src/assets/images/playing-cards/spades/10 Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/10 Of Spades.png',
   },
   {
     id: 'spades-jack',
@@ -447,7 +447,7 @@ export const playingCardTarot = [
     value: 11,
     meaning: 'Curiosity, intellect, and a thirst for knowledge.',
     phrase: 'A messenger of truth.',
-    image: 'src/assets/images/playing-cards/spades/Jack Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/Jack Of Spades.png',
   },
   {
     id: 'spades-queen',
@@ -456,7 +456,7 @@ export const playingCardTarot = [
     value: 12,
     meaning: 'Intelligence, independence, and sharp wit.',
     phrase: 'A sharp and intelligent woman.',
-    image: 'src/assets/images/playing-cards/spades/Queen of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/Queen of Spades.png',
   },
   {
     id: 'spades-king',
@@ -465,6 +465,6 @@ export const playingCardTarot = [
     value: 13,
     meaning: 'Intellectual authority, truth, and justice.',
     phrase: 'A wise and just man.',
-    image: 'src/assets/images/playing-cards/spades/King Of Spades.png',
+    image: 'src/assets/images/playing-cards/clubs/King Of Spades.png',
   },
 ];
