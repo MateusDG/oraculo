@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Menu } from 'antd';
-import { HomeOutlined, ReadOutlined, InfoCircleOutlined, SendOutlined } from '@ant-design/icons'; // Ícones do Ant Design, adicionado SendOutlined
+import { HomeOutlined, ReadOutlined, InfoCircleOutlined, SendOutlined, UserOutlined } from '@ant-design/icons'; // Ícones do Ant Design, adicionado UserOutlined
 
 /**
  * Header Component
@@ -68,23 +68,19 @@ const Header = () => {
           </h1>
         </Link>
 
-        {/* Menu de Navegação do Ant Design */}
-        {/* O tema aplicado via ConfigProvider cuidará da maior parte da estilização (cores, fontes). */}
-        {/* classes Tailwind podem ser usadas para espaçamento ou ajustes finos que o tema não cobre. */}
-        <Menu
-          mode="horizontal"
-          selectedKeys={[selectedKey]} // Chave do item ativo
-          items={menuItems}
-          className="bg-transparent border-none leading-none" // Remove estilos padrão do Menu para que o tema domine
-                                                     // e Tailwind possa ser usado para layout.
-                                                     // A cor do texto e fundo dos itens será do tema.
-          // style={{ lineHeight: 'inherit' }} // Para alinhar verticalmente se necessário
-        />
-        {/* Ocultar o texto dos itens do menu em telas pequenas e mostrar apenas ícones é mais complexo com AntD Menu
-            do que com NavLinks customizados. Pode exigir CSS customizado ou renderização condicional dos labels.
-            Por ora, o Menu do AntD mostrará ícone + label.
-            Para responsividade de apenas ícones, geralmente se usa um componente Drawer em mobile.
-        */}
+        <div className="flex items-center">
+          {/* Menu de Navegação do Ant Design */}
+          <Menu
+            mode="horizontal"
+            selectedKeys={[selectedKey]} // Chave do item ativo
+            items={menuItems}
+            className="bg-transparent border-none leading-none mr-4" // Adicionado margin-right
+          />
+          {/* Ícone de Login/Usuário */}
+          <Link to="/login" className="text-text-muted hover:text-accent-gold transition-colors duration-300">
+            <UserOutlined style={{ fontSize: '1.5rem' }} />
+          </Link>
+        </div>
       </div>
     </motion.header>
   );
