@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button, Card, Typography, Space, Divider, Tag, message as antMessage } from 'antd';
 import { RedoOutlined, EyeOutlined } from '@ant-design/icons';
-import { tarotDeck } from '../data/tarotData';
+import { playingCardDeck } from '../data/deckData';
 import TarotCard from '../components/cards/TarotCard';
 
 const { Title, Paragraph, Text } = Typography;
@@ -21,7 +21,7 @@ const ReadingPage = () => {
     setDrawnCards([]);
 
     setTimeout(() => {
-      const deckCopy = [...tarotDeck];
+      const deckCopy = [...playingCardDeck];
       const newDrawnCards = [];
       for (let i = 0; i < NUMBER_OF_CARDS_TO_DRAW; i++) {
         if (deckCopy.length > 0) {
