@@ -2,12 +2,10 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
-// Supondo que você tenha ícones, por exemplo, de react-icons
 // import { RiCopperCoinLine } from 'react-icons/ri'; // Exemplo para um naipe
 
 const TarotCard = ({ cardData, isFlipped, onClick }) => {
   const {
-    // id foi removido da desestruturação pois não é usado diretamente no componente
     name = 'Carta Desconhecida',
     imageFront = 'https://via.placeholder.com/240x400/f3e8ff/5c4d7d?text=Frente+Carta', // Usando cores da paleta (secondary, primary)
     imageBack = 'https://via.placeholder.com/240x400/483D8B/FFD700?text=Oráculo', // Usando (deepPurple, goldAccent)

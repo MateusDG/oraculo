@@ -4,18 +4,14 @@ import { initializeApp } from "firebase/app";
 // import { getAuth } from "firebase/auth"; // Se for usar Autenticação
 import { getFirestore } from "firebase/firestore"; // serverTimestamp removido daqui, pois é importado onde é usado (CosmicMessageForm)
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// !! IMPORTANTE: SUBSTITUA AS CREDENCIAIS ABAIXO PELAS DO SEU PROJETO FIREBASE !!
-// !! ESTAS SÃO APENAS PLACEHOLDERS E NÃO FUNCIONARÃO.                       !!
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY_HERE_REPLACE_ME",
-  authDomain: "YOUR_PROJECT_ID_REPLACE_ME.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID_REPLACE_ME",
-  storageBucket: "YOUR_PROJECT_ID_REPLACE_ME.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID_REPLACE_ME",
-  appId: "YOUR_APP_ID_REPLACE_ME",
-  measurementId: "YOUR_MEASUREMENT_ID_REPLACE_ME" // Opcional
+  apiKey: 'AIzaSyAemgkd02qf8_dszAth5cKZ8b1NTLUpUBo',
+  authDomain: 'ihcoraculo.firebaseapp.com',
+  projectId: 'ihcoraculo',
+  storageBucket: 'ihcoraculo.firebasestorage.app',
+  messagingSenderId: '735031336039',
+  appId: '1:735031336039:web:7dbcbe02a3c511cfc988c2',
 };
 
 // Inicializar o Firebase
