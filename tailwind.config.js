@@ -18,8 +18,8 @@ export default {
         'mid-purple': '#7F00FF',      // Violeta
       },
       fontFamily: {
-        heading: ['Cinzel Decorative', 'serif'], // Para títulos principais e elementos de destaque
-        body: ['Montserrat', 'sans-serif'],      // Para corpo de texto, UI e subtítulos
+        heading: ['Cinzel Decorative', 'serif'], // Para títulos e elementos de grande destaque
+        body: ['Inter', 'sans-serif'],           // Fonte moderna e limpa para corpo de texto e UI
       },
       // Adicionando alguns efeitos de sombra mais sofisticados
       boxShadow: {
