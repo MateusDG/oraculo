@@ -15,10 +15,12 @@ import { motion } from 'framer-motion';
  * @param {Function} props.onClick - Função a ser chamada no clique.
  */
 const TarotCard = ({ cardData, isFlipped, onClick }) => {
+  console.log('TarotCard received cardData:', cardData); // LOG PARA DEBUG
   const {
     name = 'Carta Desconhecida',
     image = 'https://via.placeholder.com/240x400/CCCCCC/FFFFFF?text=Carta',
   } = cardData || {};
+  console.log('Using image URL:', image); // LOG PARA DEBUG
 
   const cardVariants = {
     unflipped: { rotateY: 0 },

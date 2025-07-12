@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button, Card, Typography, Space, Divider, Tag, message as antMessage } from 'antd';
 import { RedoOutlined, EyeOutlined } from '@ant-design/icons';
@@ -78,11 +77,14 @@ const ReadingPage = () => {
 
       <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12 min-h-[380px] md:min-h-[400px]">
         <AnimatePresence>
-          {drawnCards.map((card, index) => (
-            <motion.div key={card.id} variants={itemVariants} exit={{ opacity: 0, scale: 0.5, transition: {duration: 0.3} }}>
-              <TarotCard cardData={card} isFlipped={flippedStates[index]} onClick={() => handleFlipCard(index)} />
-            </motion.div>
-          ))}
+          {drawnCards.map((card, index) => {
+            console.log('Rendering TarotCard with data:', card); // LOG PARA DEBUG
+            return (
+              <motion.div key={card ? card.id : `card-${index}`} variants={itemVariants} exit={{ opacity: 0, scale: 0.5, transition: {duration: 0.3} }}>
+                <TarotCard cardData={card} isFlipped={flippedStates[index]} onClick={() => handleFlipCard(index)} />
+              </motion.div>
+            );
+          })}
         </AnimatePresence>
       </motion.div>
 

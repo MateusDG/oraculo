@@ -56,12 +56,12 @@ const antdTheme = {
       // fontWeight: 'bold', // Já é negrito por padrão para primary
     },
     Menu: { // Configuração para o componente Menu, se usado no Header
-      colorItemText: '#A094B7',              // text-muted
-      colorItemTextHover: '#F0E6FF',         // text-light
-      colorItemTextSelected: '#FFC107',      // accent-gold
-      colorItemBg: 'transparent',            // Fundo transparente por padrão
-      colorItemBgHover: 'rgba(74, 0, 224, 0.3)',// primary-medium com transparência
-      colorItemBgSelected: 'rgba(44, 0, 94, 0.5)',// primary-dark com transparência
+      itemColor: '#A094B7',                  // text-muted
+      itemHoverColor: '#F0E6FF',             // text-light
+      itemSelectedColor: '#FFC107',          // accent-gold
+      itemBg: 'transparent',                 // Fundo transparente por padrão
+      itemHoverBg: 'rgba(74, 0, 224, 0.3)',  // primary-medium com transparência
+      itemSelectedBg: 'rgba(44, 0, 94, 0.5)',// primary-dark com transparência
       // Para temas escuros do AntD, se houver um modo "dark" explícito
       darkItemBg: 'transparent',
       darkItemColor: '#A094B7',
