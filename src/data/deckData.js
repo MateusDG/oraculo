@@ -4,19 +4,19 @@ const values = ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'qu
 export const playingCardDeck = suits.flatMap(suit =>
   values.map((value, index) => {
     const name = `${value.charAt(0).toUpperCase() + value.slice(1)} of ${suit.charAt(0).toUpperCase() + suit.slice(1)}`;
-    const image_name = `${value}_of_${suit}`;
+    const image_name = `${value.charAt(0).toUpperCase() + value.slice(1)} of ${suit.charAt(0).toUpperCase() + suit.slice(1)}`;
     return {
       id: `${suit}-${value}`,
       name: name,
       suit: suit,
       value: index + 1,
-      image: `/src/assets/images/playing-cards/${suit}/${image_name}.png`
+      image: `src/assets/images/playing-cards/${suit}/${image_name}.png`
     };
   })
 );
 
 // Adicionar um verso para o baralho
-export const cardBackImage = '/src/assets/images/playing-cards/card_back.png';
+export const cardBackImage = 'src/assets/images/playing-cards/card_back.png';
 
 // Criar o placeholder para o verso da carta
 // (Este passo é conceitual, o arquivo precisa ser criado de fato)
