@@ -16,7 +16,7 @@ export const playingCardDeck = suits.flatMap(suit =>
 );
 
 // Adicionar um verso para o baralho
-export const cardBackImage = 'src/assets/images/playing-cards/card_back.png';
+export const cardBackImage = 'src/assets/images/playing-cards/card_black.png';
 
 // Criar o placeholder para o verso da carta
 // (Este passo é conceitual, o arquivo precisa ser criado de fato)

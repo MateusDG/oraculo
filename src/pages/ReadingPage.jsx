@@ -63,7 +63,7 @@ const ReadingPage = () => {
   };
 
   const pageVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.2 } } };
-  const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }, exit: { y: -20, opacity: 0, transition: { duration: 0.4 } } };
+  const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } } };
 
   return (
     <motion.div className="w-full" variants={pageVariants} initial="hidden" animate="visible">
