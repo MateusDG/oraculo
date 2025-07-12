@@ -12,10 +12,10 @@ import Footer from './components/layout/Footer';
 import HomePageContent from './components/home/HomePageContent';
 import CallToActionButton from './components/common/CallToActionButton';
 
-// Page Components (anteriormente placeholders, agora importados de seus arquivos)
-import ReadingPagePlaceholder from './pages/placeholders/ReadingPagePlaceholder';
-import AboutPagePlaceholder from './pages/placeholders/AboutPagePlaceholder';
-import CosmicPortalPage from './pages/CosmicPortalPage';
+// Page Components
+import ReadingPage from './pages/ReadingPage'; // Nova página de Leitura
+import AboutPage from './pages/AboutPage';   // Nova página Sobre
+import CosmicPortalPage from './pages/CosmicPortalPage'; // Importa a página do Portal
 
 
 // Componente para o layout da Página Inicial
@@ -51,9 +51,9 @@ const AnimatedRoutes = () => {
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePageLayout />} />
-        <Route path="/reading" element={<ReadingPagePlaceholder />} />
+        <Route path="/reading" element={<ReadingPage />} /> {/* Substituído placeholder */}
         <Route path="/portal-cosmico" element={<CosmicPortalPage />} />
-        <Route path="/about" element={<AboutPagePlaceholder />} />
+        <Route path="/about" element={<AboutPage />} /> {/* Substituído placeholder */}
         {/* Adicionar uma rota Not Found no futuro */}
         {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Routes>
