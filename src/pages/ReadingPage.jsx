@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button, Card, Typography, Space, Divider, Tag, message as antMessage } from 'antd';
 import { RedoOutlined, EyeOutlined } from '@ant-design/icons';
-import { playingCardDeck } from '../data/deckData';
+import { playingCardTarot } from '../data/decks';
 import TarotCard from '../components/cards/TarotCard';
 
 const { Title, Paragraph, Text } = Typography;
@@ -21,7 +21,7 @@ const ReadingPage = () => {
     setDrawnCards([]);
 
     setTimeout(() => {
-      const deckCopy = [...playingCardDeck];
+      const deckCopy = [...playingCardTarot];
       const newDrawnCards = [];
       for (let i = 0; i < NUMBER_OF_CARDS_TO_DRAW; i++) {
         if (deckCopy.length > 0) {
@@ -110,9 +110,9 @@ const ReadingPage = () => {
                     >
                       <Paragraph className="text-text-light font-body text-base">{card.meaning}</Paragraph>
                       <Divider className="border-accent-gold/20 my-4" />
-                      <Text strong className="text-accent-gold-light font-body">Palavras-chave:</Text>
+                      <Text strong className="text-accent-gold-light font-body">Frase-chave:</Text>
                       <div className="mt-2 flex flex-wrap gap-2">
-                        {card.keywords.map(kw => <Tag key={kw} color="purple">{kw}</Tag>)}
+                        <Tag color="purple">{card.phrase}</Tag>
                       </div>
                     </Card>
                   </motion.div>
