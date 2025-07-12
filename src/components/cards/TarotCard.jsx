@@ -12,10 +12,9 @@ import { motion } from 'framer-motion';
  * @param {Object} props
  * @param {Object} props.cardData - Dados da carta (id, name, image).
  * @param {boolean} props.isFlipped - Controla se a carta está virada.
- * @param {boolean} props.isActive - Controla se a carta é a selecionada no momento.
  * @param {Function} props.onClick - Função a ser chamada no clique.
  */
-const TarotCard = ({ cardData, isFlipped, isActive, onClick }) => {
+const TarotCard = ({ cardData, isFlipped, onClick }) => {
   const {
     name = 'Carta Desconhecida',
     image = 'https://via.placeholder.com/240x400/CCCCCC/FFFFFF?text=Carta',
@@ -33,16 +32,13 @@ const TarotCard = ({ cardData, isFlipped, isActive, onClick }) => {
     transition: { type: "spring", stiffness: 250, damping: 15 },
   };
 
-  const backImage = 'https://i.pinimg.com/564x/0f/ac/4e/0fac4e31182604639912781a8c6d12a3.jpg';
-
-  // O brilho será aplicado se a carta estiver ativa e virada.
-  const activeGlow = isActive && isFlipped ? 'shadow-glow-gold' : '';
+  const backImage = '/src/assets/images/playing-cards/card_back.png';
 
   return (
     <motion.div
-      className={`w-[180px] h-[315px] md:w-[200px] md:h-[350px] cursor-pointer relative transition-all duration-500 ${activeGlow}`}
+      className="w-[180px] h-[315px] md:w-[200px] md:h-[350px] cursor-pointer relative"
       onClick={onClick}
-      whileHover={!isActive ? hoverEffect : {}} // Desativa o hover se a carta já está ativa
+      whileHover={hoverEffect}
       style={{ perspective: '1200px' }}
     >
       <motion.div
