@@ -2,13 +2,13 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import CosmicMessageForm from '../components/firebase/CosmicMessageForm';
-// Futuramente: import CosmicMessagesList from '../components/firebase/CosmicMessagesList';
+import CosmicMessagesList from '../components/firebase/CosmicMessagesList'; // Import que estava faltando
 
 /**
  * CosmicPortalPage Component
  *
  * Página dedicada a interações com o "Portal Cósmico", onde usuários podem
- * deixar mensagens e (futuramente) ver mensagens de outros.
+ * deixar mensagens e ver mensagens de outros.
  */
 const CosmicPortalPage = () => {
   const pageVariants = {
@@ -41,7 +41,7 @@ const CosmicPortalPage = () => {
       </div>
 
       {/* Lista de Mensagens Cósmicas */}
-      <div className="w-full max-w-4xl xl:max-w-5xl"> {/* Aumentando a largura máxima para a lista */}
+      <div className="w-full max-w-4xl xl:max-w-5xl">
         <motion.h2
           className="text-3xl sm:text-4xl font-heading text-accent-gold-light mb-8 text-center"
           initial={{ opacity:0, y: -20 }}
