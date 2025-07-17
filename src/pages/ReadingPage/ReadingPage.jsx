@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from 'framer-motion';
-import TarotCard from '../../components/cards/TarotCard'; // Caminho atualizado
-import { playingCardDeck } from '../../data/deckData'; // Importando o novo baralho
-import { FiRefreshCw, FiHome } from 'react-icons/fi'; // Ícones para os botões
+import { motion } from 'framer-motion';
+import TarotCard from '../../components/cards/TarotCard';
+import { playingCardDeck } from '../../data/deckData';
+import { FiRefreshCw, FiHome } from 'react-icons/fi';
 
 const ReadingPage = () => {
   const [drawnCards, setDrawnCards] = useState([]);
   const [flippedIndexes, setFlippedIndexes] = useState(new Set());
+  const [messageVisibleFor, setMessageVisibleFor] = useState(null); // Novo estado
 
   const numberOfCardsToDraw = 3;
 
@@ -21,22 +21,34 @@ const ReadingPage = () => {
     }
     setDrawnCards(newDrawnCards);
     setFlippedIndexes(new Set());
+    setMessageVisibleFor(null); // Reseta a mensagem ao tirar novas cartas
   };
 
   useEffect(() => {
     drawCards();
   }, []);
 
-  const handleFlipCard = (index) => {
+  const handleCardClick = (index) => {
+    // Se a mensagem para esta carta já está visível, oculta-a.
+    if (messageVisibleFor === index) {
+      setMessageVisibleFor(null);
+      return;
+    }
+
+    // Se a carta já está virada, mostra a mensagem.
+    if (flippedIndexes.has(index)) {
+      setMessageVisibleFor(index);
+      return;
+    }
+
+    // Se a carta não está virada, vira-a.
     setFlippedIndexes(prevFlipped => {
       const newFlipped = new Set(prevFlipped);
-      if (newFlipped.has(index)) {
-        newFlipped.delete(index); // Permite virar a carta de volta
-      } else {
-        newFlipped.add(index);
-      }
+      newFlipped.add(index);
       return newFlipped;
     });
+    // Garante que nenhuma mensagem seja mostrada ao apenas virar a carta
+    setMessageVisibleFor(null);
   };
 
   return (
@@ -56,7 +68,6 @@ const ReadingPage = () => {
         Tire suas Cartas
       </motion.h1>
 
-      {/* Área das Cartas */}
       <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 py-4 mb-8">
         {drawnCards.length === 0 && (
           <p className="font-body text-text-muted text-lg">Embaralhando as cartas...</p>
@@ -66,12 +77,12 @@ const ReadingPage = () => {
             key={card.id}
             cardData={card}
             isFlipped={flippedIndexes.has(index)}
-            onClick={() => handleFlipCard(index)}
+            onClick={() => handleCardClick(index)}
+            showMessage={messageVisibleFor === index} // Passa a nova prop
           />
         ))}
       </div>
 
-      {/* Seção Inferior: Botões de Ação */}
       <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
         <button
           onClick={drawCards}
