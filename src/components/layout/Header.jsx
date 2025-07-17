@@ -23,6 +23,11 @@ const Header = () => {
       label: <Link to="/">Início</Link>,
     },
     {
+      key: '/portal-cosmico',
+      icon: <SendOutlined style={{ fontSize: '1.1rem' }} />, // Ícone para o portal
+      label: <Link to="/portal-cosmico">Portal</Link>,
+    },
+    {
       key: '/reading',
       icon: <ReadOutlined style={{ fontSize: '1.1rem' }} />, // ReadOutlined é mais temático
       label: <Link to="/reading">Leitura</Link>,
@@ -31,11 +36,6 @@ const Header = () => {
       key: '/about',
       icon: <InfoCircleOutlined style={{ fontSize: '1.1rem' }} />,
       label: <Link to="/about">Sobre</Link>,
-    },
-    {
-      key: '/portal-cosmico',
-      icon: <SendOutlined style={{ fontSize: '1.1rem' }} />, // Ícone para o portal
-      label: <Link to="/portal-cosmico">Portal</Link>,
     }
   ];
 
